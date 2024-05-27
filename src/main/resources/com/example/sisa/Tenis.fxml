@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="anchorPane" prefHeight="630.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sisa.Controller.Tenis">
+    <children>
+        <ScrollPane prefHeight="630.0" prefWidth="1024.0">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="888.0" prefWidth="1024.0">
+                    <children>
+                        <ImageView fitHeight="303.0" fitWidth="1024.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@Imagenes/Tenis/inicioTenis.jpg" />
+                            </image>
+                        </ImageView>
+                        <Label layoutX="553.0" layoutY="714.0" text="Label" />
+                        <ImageView fitHeight="647.0" fitWidth="1016.0" layoutY="229.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@Imagenes/Tenis/TENIS.jpg" />
+                            </image>
+                        </ImageView>
+                        <AnchorPane layoutX="31.0" layoutY="259.0" prefHeight="221.0" prefWidth="170.0" style="-fx-background-color: black;">
+                            <children>
+                                <VBox alignment="CENTER_LEFT" prefHeight="39.0" prefWidth="175.0" style="-fx-background-color: yellow;">
+                                    <children>
+                                        <Label prefHeight="20.0" prefWidth="132.0" text="DISPONIBLE">
+                                            <font>
+                                                <Font name="Arial Black" size="13.0" />
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets left="20.0" />
+                                            </VBox.margin>
+                                        </Label>
+                                    </children>
+                                </VBox>
+                                <HBox alignment="CENTER_LEFT" layoutX="-2.0" layoutY="39.0" prefHeight="44.0" prefWidth="175.0">
+                                    <children>
+                                        <ImageView fitHeight="38.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@Imagenes/Iconos/wifi.gif" />
+                                            </image>
+                                            <HBox.margin>
+                                                <Insets left="10.0" />
+                                            </HBox.margin>
+                                        </ImageView>
+                                        <Label text="Ismael Sisa" textFill="WHITE">
+                                            <font>
+                                                <Font name="Calibri Bold" size="15.0" />
+                                            </font>
+                                            <HBox.margin>
+                                                <Insets left="10.0" />
+                                            </HBox.margin>
+                                        </Label>
+                                    </children>
+                                    <padding>
+                                        <Insets top="10.0" />
+                                    </padding></HBox>
+                                <HBox alignment="CENTER_LEFT" layoutX="-2.0" layoutY="83.0" prefHeight="44.0" prefWidth="174.0">
+                                    <children>
+                                        <ImageView fitHeight="38.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@Imagenes/Iconos/wifi.gif" />
+                                            </image>
+                                            <HBox.margin>
+                                                <Insets left="10.0" />
+                                            </HBox.margin>
+                                        </ImageView>
+                                        <Label text="Johane Enciso " textFill="WHITE">
+                                            <font>
+                                                <Font name="Calibri Bold" size="15.0" />
+                                            </font>
+                                            <HBox.margin>
+                                                <Insets left="10.0" />
+                                            </HBox.margin>
+                                        </Label>
+                                    </children>
+                                    <padding>
+                                        <Insets top="10.0" />
+                                    </padding>
+                                </HBox>
+                                <HBox alignment="CENTER_LEFT" layoutX="-2.0" layoutY="127.0" prefHeight="44.0" prefWidth="171.0">
+                                    <children>
+                                        <ImageView fitHeight="38.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@Imagenes/Iconos/wifi.gif" />
+                                            </image>
+                                            <HBox.margin>
+                                                <Insets left="10.0" />
+                                            </HBox.margin>
+                                        </ImageView>
+                                        <Label text="Kamilly Brito " textFill="WHITE">
+                                            <font>
+                                                <Font name="Calibri Bold" size="15.0" />
+                                            </font>
+                                            <HBox.margin>
+                                                <Insets left="10.0" />
+                                            </HBox.margin>
+                                        </Label>
+                                    </children>
+                                    <padding>
+                                        <Insets top="10.0" />
+                                    </padding>
+                                </HBox>
+                                <HBox alignment="CENTER_LEFT" layoutX="-2.0" layoutY="171.0" prefHeight="44.0" prefWidth="175.0">
+                                    <children>
+                                        <ImageView fitHeight="38.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@Imagenes/Iconos/wifi.gif" />
+                                            </image>
+                                            <HBox.margin>
+                                                <Insets left="10.0" />
+                                            </HBox.margin>
+                                        </ImageView>
+                                        <Label text="Alejandro Casado " textFill="WHITE">
+                                            <font>
+                                                <Font name="Calibri Bold" size="15.0" />
+                                            </font>
+                                            <HBox.margin>
+                                                <Insets left="10.0" />
+                                            </HBox.margin>
+                                        </Label>
+                                    </children>
+                                    <padding>
+                                        <Insets top="10.0" />
+                                    </padding>
+                                </HBox>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="268.0" layoutY="259.0" prefHeight="390.0" prefWidth="323.0" style="-fx-background-color: black;">
+                            <children>
+                                <VBox alignment="CENTER_LEFT" prefHeight="53.0" prefWidth="323.0" style="-fx-background-color: black;" AnchorPane.topAnchor="10.0">
+                                    <children>
+                                        <Label prefHeight="20.0" prefWidth="240.0" text="MADRID, 1 VS 1" textFill="WHITE">
+                                            <font>
+                                                <Font name="Arial Black" size="13.0" />
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets left="20.0" />
+                                            </VBox.margin>
+                                        </Label>
+                                        <Label prefHeight="12.0" prefWidth="256.0" text="Pista de Tenis, Polideportivo de Leganes " textFill="WHITE">
+                                            <VBox.margin>
+                                                <Insets left="20.0" top="10.0" />
+                                            </VBox.margin>
+                                            <font>
+                                                <Font name="System Bold" size="8.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </VBox>
+                                <ImageView fitHeight="146.0" fitWidth="287.0" layoutX="20.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@Imagenes/Tenis/tenis1.jpg" />
+                                    </image></ImageView>
+                                <VBox layoutX="20.0" layoutY="217.0" prefHeight="117.0" prefWidth="285.0">
+                                    <children>
+                                        <Label prefHeight="19.0" prefWidth="285.0" text="La cancha de tenis es una instalación deportiva para" textFill="WHITE" />
+                                        <Label layoutX="10.0" layoutY="10.0" prefHeight="16.0" prefWidth="285.0" text="partidos entre dos jugadores (individuales) o" textFill="WHITE" />
+                                        <Label layoutX="10.0" layoutY="38.0" prefHeight="20.0" prefWidth="285.0" text="cuatro jugadores (dobles). A diferencia de otras" textFill="WHITE" />
+                                        <Label layoutX="10.0" layoutY="46.0" prefHeight="20.0" prefWidth="285.0" text="canchas, está diseñada con líneas específicas que " textFill="WHITE" />
+                                        <Label layoutX="10.0" layoutY="66.0" prefHeight="20.0" prefWidth="285.0" text="delimitan áreas de juego y servicio, adaptándose a" textFill="WHITE" />
+                                        <Label layoutX="10.0" layoutY="86.0" prefHeight="20.0" prefWidth="285.0" text=" las necesidades del tenis." textFill="WHITE" />
+                                    </children>
+                                </VBox>
+                                <Button layoutX="93.0" layoutY="342.0" mnemonicParsing="false" onAction="#verMasTenis1" prefHeight="34.0" prefWidth="136.0" styleClass="boton-tenis" stylesheets="@Estilos/estilo1.css" text="VER MAS" textFill="WHITE">
+                                    <font>
+                                        <Font name="Arial Black" size="12.0" />
+                                    </font></Button>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="636.0" layoutY="259.0" prefHeight="390.0" prefWidth="323.0" style="-fx-background-color: black;">
+                            <children>
+                                <VBox alignment="CENTER_LEFT" prefHeight="53.0" prefWidth="323.0" style="-fx-background-color: black;" AnchorPane.topAnchor="10.0">
+                                    <children>
+                                        <Label prefHeight="20.0" prefWidth="223.0" text="BARAJAS, 2 VS 2" textFill="WHITE">
+                                            <font>
+                                                <Font name="Arial Black" size="13.0" />
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets left="20.0" />
+                                            </VBox.margin>
+                                        </Label>
+                                        <Label prefHeight="12.0" prefWidth="252.0" text="Pista de Tenis, Polideportivo de BARAJAS" textFill="WHITE">
+                                            <VBox.margin>
+                                                <Insets left="20.0" top="10.0" />
+                                            </VBox.margin>
+                                            <font>
+                                                <Font name="System Bold" size="8.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </VBox>
+                                <ImageView fitHeight="146.0" fitWidth="287.0" layoutX="20.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@Imagenes/Tenis/tenis2.jpg" />
+                                    </image>
+                                </ImageView>
+                                <VBox layoutX="20.0" layoutY="217.0" prefHeight="118.0" prefWidth="285.0">
+                                    <children>
+                                        <Label prefHeight="19.0" prefWidth="285.0" text="La cancha de tenis es una instalación deportiva para" textFill="WHITE" />
+                                        <Label layoutX="10.0" layoutY="10.0" prefHeight="16.0" prefWidth="285.0" text="partidos entre dos jugadores (individuales) o" textFill="WHITE" />
+                                        <Label layoutX="10.0" layoutY="38.0" prefHeight="20.0" prefWidth="285.0" text="cuatro jugadores (dobles). A diferencia de otras" textFill="WHITE" />
+                                        <Label layoutX="10.0" layoutY="46.0" prefHeight="20.0" prefWidth="285.0" text="canchas, está diseñada con líneas específicas que " textFill="WHITE" />
+                                        <Label layoutX="10.0" layoutY="66.0" prefHeight="20.0" prefWidth="285.0" text="delimitan áreas de juego y servicio, adaptándose a" textFill="WHITE" />
+                                        <Label layoutX="10.0" layoutY="86.0" prefHeight="20.0" prefWidth="285.0" text=" las necesidades del tenis." textFill="WHITE" />
+                                    </children>
+                                </VBox>
+                                <Button layoutX="93.0" layoutY="342.0" mnemonicParsing="false" onAction="#verMasTenis2" prefHeight="34.0" prefWidth="136.0" styleClass="boton-tenis" stylesheets="@Estilos/estilo1.css" text="VER MAS" textFill="WHITE">
+                                    <font>
+                                        <Font name="Arial Black" size="12.0" />
+                                    </font>
+                                </Button>
+                            </children>
+                        </AnchorPane>
+                        <Label layoutX="409.0" layoutY="72.0" prefHeight="85.0" prefWidth="262.0" text="TENIS" textFill="WHITE">
+                            <font>
+                                <Font name="Arial Black" size="55.0" />
+                            </font>
+                        </Label>
+                    </children></AnchorPane>
+            </content>
+        </ScrollPane>
+    </children>
+</AnchorPane>

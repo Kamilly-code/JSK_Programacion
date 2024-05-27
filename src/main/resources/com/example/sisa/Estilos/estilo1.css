@@ -1,0 +1,190 @@
+/*=============================== INICIO ========================================= */
+
+.inicio-texto{
+    -fx-background-color: transparent;
+    -fx-border-color: #6f6d6d;
+    -fx-border-width: 0px 0px  1px 0px;
+}
+.inicio-boton {
+    -fx-background-color: #2271b3;
+}
+.inicio-boton:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 13, 0.4, 0, 0);
+    -fx-scale-x: 1.00;
+    -fx-scale-y: 1.00;
+}
+
+
+
+/* ============================== PRINCIPAL ================================================ */
+
+.boton-jugar{
+    -fx-background-color: rgba(0, 0, 0, 0.5);
+}
+.boton-jugar:hover{
+    -fx-background-color: rgba(58, 119, 211, 0.5);
+}
+
+.boton-pelear{
+    -fx-background-color: rgba(0, 0, 0, 0.5);
+}
+.boton-pelear:hover{
+    -fx-background-color: rgba(252, 0, 0, 0.5);
+}
+
+.boton-tenis{
+    -fx-background-color: rgba(0, 0, 0, 0.5);
+}
+.boton-tenis:hover{
+    -fx-background-color: rgba(221, 255, 0, 0.58);
+}
+.scroll-pane {
+    -fx-background-color: transparent;
+}
+
+/* =========================== MENU SUPERIOR ========================================*/
+
+.boton-menu{
+    -fx-background-color: transparent;
+}
+
+/* ============================ MENU LATERAL ======================================= */
+.menu{
+    -fx-background-color: rgb(58,69,88);
+}
+
+.botones{
+    -fx-background-color: transparent;
+    -fx-background-radius: 0px;
+    -fx-text-fill: #b8b1b1;
+
+}
+.sidebar-btn{
+    -fx-background-color: transparent;
+    -fx-background-radius: 0px;
+    -fx-text-fill: #b8b1b1;
+}
+.sidebar-btn:hover{
+    -fx-background-color: transparent;
+    -fx-background-radius: 0px;
+    -fx-text-fill: #b8b1b1;
+    -fx-border-color: rgb(22,169,250);
+    -fx-border-width: 0px 0px 0px 3px;
+}
+
+
+/*=========================== FUTBOL ===========================*/
+
+.menu-boton{
+    -fx-background-color: #fff;
+    -fx-border-color: #cccccc;
+    -fx-border-width: 0px 0px 1px 0px;
+}
+
+.contenido_principal{
+    -fx-background-color: #fff;
+    -fx-background-radius: 100px;
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 100%;
+}
+
+.contenido_principal:hover{
+    -fx-background-color: #0099ff;
+    -fx-background-radius: 100px;
+}
+
+
+/*==================================== DEPORTES ======================================== */
+.imagenes{
+    -fx-background-color: transparent;
+}
+.imagenes:hover{
+    -fx-border-radius: 10 10 10 10;
+    -fx-background-radius: 10 10 10 10;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,1) , 5, 0.0 , 0 , 1 );
+}
+
+
+/*===================================== AMIGOS =========================================== */
+
+.table-view .column-header-background {
+    -fx-background-color: white;
+    -fx-color: black;
+    -fx-padding: 10;
+}
+
+.table-view .column-header,
+.table-view .filler {
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: black;
+    -fx-color: black;
+
+}
+
+
+/*==================================================================================== */
+
+.chart {
+    -fx-background-color: #f4f4f4;
+}
+
+.chart-legend {
+    -fx-background-color: #e0e0e0;
+    -fx-padding: 10px;
+    -fx-border-color: #b0b0b0;
+    -fx-border-width: 1px;
+}
+
+.chart-bar {
+    -fx-bar-fill: #3498db;
+}
+
+.chart-bar:hover {
+    -fx-bar-fill: #2980b9;
+}
+
+.chart-axis {
+    -fx-tick-label-fill: #333333;
+    -fx-tick-mark-stroke: #aaaaaa;
+    -fx-border-color: transparent;
+}
+
+.chart-title {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+    -fx-padding: 10px 0;
+}
+
+.chart-horizontal-grid-lines, .chart-vertical-grid-lines {
+    -fx-stroke: #dcdcdc;
+}
+
+.chart-horizontal-zero-line, .chart-vertical-zero-line {
+    -fx-stroke: #ff0000;
+    -fx-stroke-width: 2px;
+}
+
+.default-color1.chart-bar {
+    -fx-bar-fill: #ffcc00;
+}
+
+.chart-bar:hover {
+    -fx-bar-fill: #ff9900;
+}
+
+/**
+============================================================================================================
+ */
+
+.boton-jugadores {
+    -fx-background-color: transparent;
+}
+.boton-jugadores:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 15, 0.7, 0, 0);
+    -fx-scale-x: 1.00;
+    -fx-scale-y: 1.00;
+}

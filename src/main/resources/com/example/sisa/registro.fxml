@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<HBox maxHeight="503.0" maxWidth="800.0" minHeight="503.0" minWidth="800.0" prefHeight="503.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sisa.Controller.Inicio">
+    <children>
+        <VBox alignment="TOP_CENTER" prefHeight="503.0" prefWidth="570.0">
+            <children>
+                <VBox alignment="BOTTOM_LEFT" prefHeight="59.0" prefWidth="286.0">
+                    <children>
+                        <Hyperlink fx:id="flecha" onAction="#eventFlecha" prefHeight="35.0" prefWidth="42.0" text="🢀">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </Hyperlink>
+                    </children></VBox>
+                <Label prefHeight="71.0" prefWidth="266.0" text="REGISTRATE" textFill="#686868">
+                    <font>
+                        <Font name="Calibri Bold" size="33.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets left="20.0" />
+                    </VBox.margin>
+                </Label>
+                <VBox prefHeight="311.0" prefWidth="262.0">
+                    <children>
+                  <HBox>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                     <children>
+                              <TextField fx:id="textNombre" prefHeight="26.0" prefWidth="180.0" promptText="Nombre" styleClass="inicio-texto" stylesheets="@Estilos/estilo1.css">
+                           <HBox.margin>
+                              <Insets top="20.0" />
+                           </HBox.margin>
+                        </TextField>
+                              <TextField fx:id="textApellidos" prefHeight="26.0" prefWidth="190.0" promptText="Apellidos" styleClass="inicio-texto" stylesheets="@Estilos/estilo1.css">
+                           <HBox.margin>
+                              <Insets left="30.0" top="20.0" />
+                           </HBox.margin>
+                              </TextField>
+                     </children>
+                  </HBox>
+                        <TextField fx:id="textCorreo" promptText="CorreoElectronico" styleClass="inicio-texto" stylesheets="@Estilos/estilo1.css">
+                            <VBox.margin>
+                                <Insets top="20.0" />
+                            </VBox.margin>
+                        </TextField>
+                        <TextField fx:id="textUsuario" promptText="Usuario" styleClass="inicio-texto" stylesheets="@Estilos/estilo1.css">
+                            <VBox.margin>
+                                <Insets top="20.0" />
+                            </VBox.margin></TextField>
+                        <PasswordField fx:id="textContrasena" promptText="Contraseña" styleClass="inicio-texto" stylesheets="@Estilos/estilo1.css">
+                            <VBox.margin>
+                                <Insets top="20.0" />
+                            </VBox.margin></PasswordField>
+                        <Button fx:id="botonContinuar" mnemonicParsing="false" onAction="#eventContinuar" prefHeight="39.0" prefWidth="246.0" styleClass="inicio-boton" stylesheets="@Estilos/estilo1.css" text="CONTINUAR" textFill="WHITE">
+                            <font>
+                                <Font name="Arial Black" size="13.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets top="20.0" />
+                            </VBox.margin>
+                        </Button>
+                    </children>
+                    <VBox.margin>
+                        <Insets left="20.0" right="20.0" />
+                    </VBox.margin>
+                </VBox>
+            </children>
+        </VBox>
+        <VBox alignment="CENTER" prefHeight="503.0" prefWidth="506.0" style="-fx-background-color: #30373e;">
+            <children>
+                <ImageView fitHeight="317.0" fitWidth="405.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@Imagenes/LOGO/LOGO-SISA.png" />
+                    </image>
+                </ImageView>
+            </children></VBox>
+    </children>
+</HBox>

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.TextFlow?>
+
+<VBox fx:id="sidebar" alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="250.0" styleClass="menu" stylesheets="@Estilos/estilo1.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sisa.Controller.MenuLateral">
+   <children>
+      <ImageView fitHeight="80.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Imagenes/Iconos/user.png" />
+         </image>
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin>
+      </ImageView>
+      <TextFlow fx:id="nombreUsuario" prefHeight="42.0" prefWidth="234.0" />
+      <HBox prefHeight="54.0" prefWidth="234.0" styleClass="sidebar-btn" stylesheets="@Estilos/estilo1.css">
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+         <children>
+            <Button mnemonicParsing="false" onAction="#botonInicio" prefHeight="49.0" prefWidth="230.0" styleClass="botones" stylesheets="@Estilos/estilo1.css">
+               <graphic>
+                  <Label prefHeight="22.0" prefWidth="216.0" text="Inicio" textFill="#2884b2">
+                     <font>
+                        <Font name="Consolas Bold" size="14.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="22.0" fitWidth="62.0" pickOnBounds="true" preserveRatio="true" styleClass="sidebar-btn-icon">
+                           <image>
+                              <Image url="@Imagenes/Iconos/hogar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Label>
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+      <HBox layoutX="18.0" layoutY="138.0" prefHeight="54.0" prefWidth="234.0" styleClass="sidebar-btn" stylesheets="@Estilos/estilo1.css">
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+         <children>
+            <Button mnemonicParsing="false" onAction="#botonDeportes" prefHeight="49.0" prefWidth="230.0" styleClass="botones" stylesheets="@Estilos/estilo1.css">
+               <graphic>
+                  <Label prefHeight="22.0" prefWidth="216.0" text="Deportes" textFill="#2884b2">
+                     <font>
+                        <Font name="Consolas Bold" size="14.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="22.0" fitWidth="62.0" pickOnBounds="true" preserveRatio="true" styleClass="sidebar-btn-icon">
+                           <image>
+                              <Image url="@Imagenes/Iconos/deportes.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Label>
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+      <HBox layoutX="18.0" layoutY="192.0" prefHeight="54.0" prefWidth="234.0" styleClass="sidebar-btn" stylesheets="@Estilos/estilo1.css">
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+         <children>
+            <Button mnemonicParsing="false" onAction="#botonPuntos" prefHeight="49.0" prefWidth="230.0" styleClass="botones" stylesheets="@Estilos/estilo1.css">
+               <graphic>
+                  <Label prefHeight="22.0" prefWidth="216.0" text="Puntos" textFill="#2884b2">
+                     <font>
+                        <Font name="Consolas Bold" size="14.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="22.0" fitWidth="62.0" pickOnBounds="true" preserveRatio="true" styleClass="sidebar-btn-icon">
+                           <image>
+                              <Image url="@Imagenes/Iconos/puntos.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Label>
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+      <HBox layoutX="18.0" layoutY="246.0" prefHeight="54.0" prefWidth="234.0" styleClass="sidebar-btn" stylesheets="@Estilos/estilo1.css">
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+         <children>
+            <Button mnemonicParsing="false" onAction="#botonAmigos" prefHeight="49.0" prefWidth="230.0" styleClass="botones" stylesheets="@Estilos/estilo1.css">
+               <graphic>
+                  <Label prefHeight="22.0" prefWidth="216.0" text="Amigos" textFill="#2884b2">
+                     <font>
+                        <Font name="Consolas Bold" size="14.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="22.0" fitWidth="62.0" pickOnBounds="true" preserveRatio="true" styleClass="sidebar-btn-icon">
+                           <image>
+                              <Image url="@Imagenes/Iconos/amigos.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Label>
+               </graphic>
+            </Button>
+         </children>
+         <VBox.margin>
+            <Insets bottom="30.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox layoutX="18.0" layoutY="300.0" prefHeight="54.0" prefWidth="234.0" styleClass="sidebar-btn" stylesheets="@Estilos/estilo1.css">
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+         <children>
+            <Button mnemonicParsing="false" onAction="#botonSalir" prefHeight="64.0" prefWidth="214.0" styleClass="botones" stylesheets="@Estilos/estilo1.css">
+               <graphic>
+                  <Label prefHeight="22.0" prefWidth="216.0" text="Salir" textFill="#2884b2">
+                     <font>
+                        <Font name="Consolas Bold" size="14.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="22.0" fitWidth="62.0" pickOnBounds="true" preserveRatio="true" styleClass="sidebar-btn-icon">
+                           <image>
+                              <Image url="@Imagenes/Iconos/cerrar-sesion.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Label>
+               </graphic>
+            </Button>
+         </children>
+         <VBox.margin>
+            <Insets top="200.0" />
+         </VBox.margin>
+      </HBox>
+   </children>
+</VBox>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<HBox maxHeight="503.0" maxWidth="800.0" minHeight="503.0" minWidth="800.0" prefHeight="503.0" prefWidth="800.0" stylesheets="@Estilos/estilo1.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sisa.Controller.Inicio">
+    <children>
+        <VBox alignment="CENTER_LEFT" prefHeight="503.0" prefWidth="680.0">
+            <children>
+            <AnchorPane prefHeight="37.0" prefWidth="518.0">
+               <children>
+                  <ImageView fitHeight="64.0" fitWidth="62.0" layoutX="7.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Imagenes/LOGO/LOGO-SISA.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+                <Label prefHeight="51.0" prefWidth="261.0" stylesheets="@Estilos/estilo1.css" text="INICIAR SESIÓN">
+                    <font>
+                        <Font name="Arial Black" size="24.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets bottom="10.0" left="20.0" />
+                    </VBox.margin>
+                </Label>
+                <VBox prefHeight="140.0" prefWidth="478.0">
+                    <children>
+                        <Label text="USUARIO" textFill="#6f6d6d">
+                            <font>
+                                <Font name="Calibri Bold" size="18.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="textUsuario" prefHeight="25.0" prefWidth="417.0" styleClass="inicio-texto" stylesheets="@Estilos/estilo1.css">
+                     <VBox.margin>
+                        <Insets bottom="10.0" right="30.0" top="10.0" />
+                     </VBox.margin></TextField>
+                        <Label text="CONTRASEÑA" textFill="#6f6d6d">
+                            <font>
+                                <Font name="Calibri Bold" size="18.0" />
+                            </font>
+                        </Label>
+                        <PasswordField fx:id="textContrasena" prefHeight="25.0" prefWidth="417.0" styleClass="inicio-texto" stylesheets="@Estilos/estilo1.css">
+                     <VBox.margin>
+                        <Insets bottom="10.0" right="30.0" top="10.0" />
+                     </VBox.margin></PasswordField>
+                        <Button id="botonIniciar" fx:id="botonIniciar" mnemonicParsing="false" onAction="#eventInicar" prefHeight="39.0" prefWidth="170.0" styleClass="inicio-boton" stylesheets="@Estilos/estilo1.css" text="INICIAR" textFill="WHITE">
+                            <font>
+                                <Font name="Arial Black" size="13.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets top="20.0" />
+                            </VBox.margin>
+                        </Button>
+                    </children>
+                    <VBox.margin>
+                        <Insets left="20.0" right="20.0" />
+                    </VBox.margin>
+                </VBox>
+                <VBox alignment="BOTTOM_LEFT" prefHeight="61.0" prefWidth="518.0">
+                    <children>
+                        <Hyperlink fx:id="link" onAction="#eventLink" text="Crear Usuario">
+                            <padding>
+                                <Insets left="20.0" />
+                            </padding>
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                        </Hyperlink>
+                    </children>
+                </VBox>
+            </children>
+        </VBox>
+        <VBox alignment="CENTER" prefHeight="503.0" prefWidth="324.0" style="-fx-background-color: #30373e;">
+            <children>
+                <ImageView fitHeight="503.0" fitWidth="515.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@Imagenes/Futbol/PORTADA.jpg" />
+                    </image>
+                </ImageView>
+            </children></VBox>
+    </children>
+</HBox>

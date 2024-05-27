@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox fx:id="menubar" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sisa.Controller.Controller">
+   <children>
+      <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="1024.0" styleClass="menu-boton" stylesheets="@Estilos/estilo1.css">
+         <children>
+            <Button fx:id="botonMenu" mnemonicParsing="false" styleClass="boton-menu" stylesheets="@Estilos/estilo1.css">
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true" styleClass="menu-icon">
+                     <image>
+                        <Image url="@Imagenes/Iconos/menu.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <AnchorPane prefHeight="49.0" prefWidth="899.0" />
+            <Button fx:id="botonConfig" layoutX="10.0" layoutY="15.0" mnemonicParsing="false" styleClass="boton-menu" stylesheets="@Estilos/estilo1.css">
+               <graphic>
+                  <ImageView fx:id="botonConf" fitHeight="32.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true" styleClass="menu-icon">
+                     <image>
+                        <Image url="@Imagenes/Iconos/configuraciones.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children></HBox>
+   </children>
+</HBox>

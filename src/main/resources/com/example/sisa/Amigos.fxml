@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="757.0" prefWidth="1024.0" stylesheets="@Estilos/estilo1.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sisa.Controller.Amigos">
+   <children>
+      <BorderPane prefHeight="580.0" prefWidth="1024.0">
+         <top>
+            <HBox alignment="CENTER_LEFT" prefHeight="80.0" prefWidth="473.0" style="-fx-background-color: #b8b1b1;" BorderPane.alignment="CENTER">
+               <children>
+                  <Label prefHeight="32.0" prefWidth="123.0" text="AMIGOS">
+                     <font>
+                        <Font name="Arial Black" size="22.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="50.0" />
+                     </HBox.margin>
+                  </Label>
+                  <AnchorPane prefHeight="80.0" prefWidth="422.0" />
+                  <Label fx:id="buscadorAmigos" prefHeight="17.0" prefWidth="59.0" text="buscador " />
+                  <TextField fx:id="textBuscador" prefHeight="25.0" prefWidth="204.0" />
+                  <AnchorPane prefHeight="80.0" prefWidth="58.0" />
+                  <Button fx:id="botonBuscador" mnemonicParsing="false" text="Agregar" onAction="#ButtonAgregarAmigos" />
+               </children></HBox>
+         </top>
+         <center>
+            <TableView fx:id="TablaAmigos1" prefHeight="262.0" prefWidth="1024.0" BorderPane.alignment="CENTER">
+            <columns>
+                <TableColumn fx:id="columnaNombre" prefWidth="75.0" text="Nombre" />
+                <TableColumn fx:id="columnApellido" prefWidth="75.0" text="Apellidos" />
+                <TableColumn fx:id="columCorreo" prefWidth="75.0" text="Correo Electronico" />
+                <TableColumn prefWidth="75.0" text="Conectado hace" />
+                <TableColumn prefWidth="75.0" text="Disponible" />
+            </columns>
+            <columnResizePolicy>
+                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+             </columnResizePolicy>
+        </TableView>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
