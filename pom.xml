@@ -5,24 +5,24 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.example</groupId>
-  <artifactId>boneca2</artifactId>
+  <artifactId>SISA</artifactId>
   <version>1.0-SNAPSHOT</version>
-  <name>boneca2</name>
+  <name>SISA</name>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-<junit.version>5.10.0</junit.version>  </properties>
+<junit.version>5.9.2</junit.version>  </properties>
 
   <dependencies>
     <dependency>
       <groupId>org.openjfx</groupId>
       <artifactId>javafx-controls</artifactId>
-      <version>21</version>
+      <version>21-ea+24</version>
     </dependency>
     <dependency>
       <groupId>org.openjfx</groupId>
       <artifactId>javafx-fxml</artifactId>
-      <version>21</version>
+      <version>21-ea+24</version>
     </dependency>
 
 <dependency>
@@ -58,7 +58,7 @@
             <!-- Default configuration for running with: mvn clean javafx:run -->
             <id>default-cli</id>
             <configuration>
-              <mainClass>com.example.boneca2/com.example.boneca2.HelloApplication</mainClass>
+              <mainClass>com.example.sisa/com.example.sisa.Aplicación</mainClass>
               <launcher>app</launcher>
               <jlinkZipName>app</jlinkZipName>
               <jlinkImageName>app</jlinkImageName>

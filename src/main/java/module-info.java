@@ -1,8 +1,11 @@
-module com.example.boneca2 {
+module com.example.sisa {
     requires javafx.controls;
     requires javafx.fxml;
 
 
-    opens com.example.boneca2 to javafx.fxml;
-    exports com.example.boneca2;
+    opens com.example.sisa to javafx.fxml;
+    opens com.example.sisa.POO to javafx.base;
+    exports com.example.sisa;
+    exports com.example.sisa.Controller;
+    opens com.example.sisa.Controller to javafx.fxml;
 }
