@@ -20,7 +20,7 @@
             <Insets top="10.0" />
          </VBox.margin>
       </ImageView>
-      <TextFlow fx:id="nombreUsuario" prefHeight="42.0" prefWidth="234.0" />
+      <TextFlow fx:id="nombreUsuario" prefHeight="42.0" prefWidth="234.0" textAlignment="CENTER" />
       <HBox prefHeight="54.0" prefWidth="234.0" styleClass="sidebar-btn" stylesheets="@Estilos/estilo1.css">
          <VBox.margin>
             <Insets />
