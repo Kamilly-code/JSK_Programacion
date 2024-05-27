@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sisa.Controller.TablaJugadoresFutbol1">
+   <children>
+      <TableView fx:id="tablaJugadores1" prefHeight="400.0" prefWidth="600.0">
+        <columns>
+          <TableColumn fx:id="columnaJugadores" prefWidth="205.0" text="Jugadores" />
+          <TableColumn fx:id="columnaPosicion" minWidth="0.0" prefWidth="208.0" text="Posición" />
+            <TableColumn fx:id="columnaFecha" prefWidth="186.0" text="Fecha" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

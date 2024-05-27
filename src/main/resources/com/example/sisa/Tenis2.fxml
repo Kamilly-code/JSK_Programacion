@@ -87,7 +87,7 @@
                                     <children>
                                         <ImageView fitHeight="427.0" fitWidth="1024.0" pickOnBounds="true" preserveRatio="true">
                                             <image>
-                                                <Image url="@Imagenes/Tenis/Diseño%20sin%20título%20(1).png" />
+                                                <Image url="@Imagenes/Tenis/Diseño sin título (1).png" />
                                             </image>
                                             <HBox.margin>
                                                 <Insets />

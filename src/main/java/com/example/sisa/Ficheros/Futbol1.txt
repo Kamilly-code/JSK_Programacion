@@ -1,0 +1,6 @@
+
+kamilly;brito;Portero1_GrupoAzul;2024-05-29
+kamilly;brito;Defensa1_GrupoAzul;2024-05-30
+kamilly;brito;Defensa1_GrupoAzul;2024-05-31
+kamilly;brito;Centrocambista2_GrupoAzul;2024-06-01
+kamilly;brito;Defensa2_GrupoAzul;2024-06-08

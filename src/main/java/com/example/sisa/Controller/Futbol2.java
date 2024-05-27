@@ -26,15 +26,13 @@ import java.time.format.DateTimeFormatter;
 import java.util.ResourceBundle;
 import java.util.Scanner;
 
-import static com.example.sisa.Controller.Controller.*;
-import static com.example.sisa.Controller.Calendario.*;
+import static com.example.sisa.Controller.Controller.getUsuario_Actual;
 
-
-public class Futbol implements Initializable {
+public class Futbol2 implements Initializable {
     @FXML
     private AnchorPane anchorPane;
     //Exteriores****************************************************************************************
-    private CalendarioFutbol1 calendarioController;
+    private CalendarioFutbol2 calendarioController;
     @FXML
     private DatePicker fechaDisponible;
     private static ObservableList<Jugadores> jugadores = FXCollections.observableArrayList();
@@ -46,7 +44,7 @@ public class Futbol implements Initializable {
     @FXML
     private void verMasFutbol1(ActionEvent event){
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/sisa/Futbol1.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/sisa/Futbol2.fxml"));
             Parent futbol1 = loader.load();
 
             anchorPane.getChildren().setAll(futbol1);
@@ -71,7 +69,7 @@ public class Futbol implements Initializable {
     }
     @FXML
     public void eventJugador1(ActionEvent actionEvent) {
-       String nombreUsuarioActual = getUsuario_Actual();
+        String nombreUsuarioActual = getUsuario_Actual();
         if (nombreUsuarioActual == null) {
             System.out.println("No es posible obtener el nombre del usuario actual.");
             return;
@@ -85,7 +83,7 @@ public class Futbol implements Initializable {
         if (datos != null) {
             nombre = datos[0];
             apellido = datos[1];
-            Posiciones posicion = Posiciones.Delantero3_GrupoVerde;
+            Posiciones posicion = Posiciones.Luchador1;
 
 
 
@@ -99,11 +97,11 @@ public class Futbol implements Initializable {
             if (result == ButtonType.OK) {
                 try {
                     FXMLLoader loader = new FXMLLoader();
-                    loader.setLocation(getClass().getResource("/com/example/sisa/CalendarioFutbol1.fxml"));
+                    loader.setLocation(getClass().getResource("/com/example/sisa/CalendarioFutbol2.fxml"));
                     Parent root = loader.load();
 
                     // Obtenha o controlador e defina o nome, sobrenome e posição
-                    CalendarioFutbol1 calendarioController = loader.getController();
+                    CalendarioFutbol2 calendarioController = loader.getController();
                     calendarioController.setNombre(nombre);
                     calendarioController.setApellido(apellido);
                     calendarioController.setPosicion(posicion);
@@ -124,7 +122,7 @@ public class Futbol implements Initializable {
     }
     @FXML
     public void eventJugador2(ActionEvent actionEvent) {
-       String nombreUsuarioActual = getUsuario_Actual();
+        String nombreUsuarioActual = getUsuario_Actual();
         if (nombreUsuarioActual == null) {
             System.out.println("No es posible obtener el nombre del usuario actual.");
             return;
@@ -152,11 +150,11 @@ public class Futbol implements Initializable {
             if (result == ButtonType.OK) {
                 try {
                     FXMLLoader loader = new FXMLLoader();
-                    loader.setLocation(getClass().getResource("/com/example/sisa/CalendarioFutbol1.fxml"));
+                    loader.setLocation(getClass().getResource("/com/example/sisa/CalendarioFutbol2.fxml"));
                     Parent root = loader.load();
 
                     // Obtenha o controlador e defina o nome, sobrenome e posição
-                    CalendarioFutbol1 calendarioController = loader.getController();
+                    CalendarioFutbol2 calendarioController = loader.getController();
                     calendarioController.setNombre(nombre);
                     calendarioController.setApellido(apellido);
                     calendarioController.setPosicion(posicion);
@@ -177,60 +175,7 @@ public class Futbol implements Initializable {
     }
     @FXML
     public void eventJugador3(ActionEvent actionEvent) {
-       String nombreUsuarioActual = getUsuario_Actual();
-        if (nombreUsuarioActual == null) {
-            System.out.println("No es posible obtener el nombre del usuario actual.");
-            return;
-        }
-        nombreUsuarioActual = nombreUsuarioActual.trim();
-
-        String nombre = null;
-        String apellido = null;
-
-        String[] datos = cargarDatosRegistro(nombreUsuarioActual);
-        if (datos != null) {
-            nombre = datos[0];
-            apellido = datos[1];
-            Posiciones posicion = Posiciones.Defensa5_GrupoVerde;
-
-
-
-            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-            alert.setTitle("Confirmar Acción");
-            alert.setHeaderText("¿SEGURO QUE QUIERES CONTINUAR?");
-            alert.setContentText("Accederás a la tabla calendário para eligir el día del partido.");
-
-            ButtonType result = alert.showAndWait().orElse(ButtonType.CANCEL);
-
-            if (result == ButtonType.OK) {
-                try {
-                    FXMLLoader loader = new FXMLLoader();
-                    loader.setLocation(getClass().getResource("/com/example/sisa/CalendarioFutbol1.fxml"));
-                    Parent root = loader.load();
-
-                    // Obtenha o controlador e defina o nome, sobrenome e posição
-                    CalendarioFutbol1 calendarioController = loader.getController();
-                    calendarioController.setNombre(nombre);
-                    calendarioController.setApellido(apellido);
-                    calendarioController.setPosicion(posicion);
-
-                    Scene scene = new Scene(root);
-                    Stage stage = new Stage();
-                    stage.setScene(scene);
-                    stage.show();
-
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-        } else {
-            System.out.println("Não foi possível obter os dados do registro.");
-            return;
-        }
-    }
-    @FXML
-    public void eventJugador4(ActionEvent actionEvent) {
-       String nombreUsuarioActual = getUsuario_Actual();
+        String nombreUsuarioActual = getUsuario_Actual();
         if (nombreUsuarioActual == null) {
             System.out.println("No es posible obtener el nombre del usuario actual.");
             return;
@@ -258,11 +203,11 @@ public class Futbol implements Initializable {
             if (result == ButtonType.OK) {
                 try {
                     FXMLLoader loader = new FXMLLoader();
-                    loader.setLocation(getClass().getResource("/com/example/sisa/CalendarioFutbol1.fxml"));
+                    loader.setLocation(getClass().getResource("/com/example/sisa/CalendarioFutbol2.fxml"));
                     Parent root = loader.load();
 
                     // Obtenha o controlador e defina o nome, sobrenome e posição
-                    CalendarioFutbol1 calendarioController = loader.getController();
+                    CalendarioFutbol2 calendarioController = loader.getController();
                     calendarioController.setNombre(nombre);
                     calendarioController.setApellido(apellido);
                     calendarioController.setPosicion(posicion);
@@ -282,8 +227,8 @@ public class Futbol implements Initializable {
         }
     }
     @FXML
-    public void eventJugador5(ActionEvent actionEvent) {
-       String nombreUsuarioActual = getUsuario_Actual();
+    public void eventJugador4(ActionEvent actionEvent) {
+        String nombreUsuarioActual = getUsuario_Actual();
         if (nombreUsuarioActual == null) {
             System.out.println("No es posible obtener el nombre del usuario actual.");
             return;
@@ -311,11 +256,64 @@ public class Futbol implements Initializable {
             if (result == ButtonType.OK) {
                 try {
                     FXMLLoader loader = new FXMLLoader();
-                    loader.setLocation(getClass().getResource("/com/example/sisa/CalendarioFutbol1.fxml"));
+                    loader.setLocation(getClass().getResource("/com/example/sisa/CalendarioFutbol2.fxml"));
                     Parent root = loader.load();
 
                     // Obtenha o controlador e defina o nome, sobrenome e posição
-                    CalendarioFutbol1 calendarioController = loader.getController();
+                    CalendarioFutbol2 calendarioController = loader.getController();
+                    calendarioController.setNombre(nombre);
+                    calendarioController.setApellido(apellido);
+                    calendarioController.setPosicion(posicion);
+
+                    Scene scene = new Scene(root);
+                    Stage stage = new Stage();
+                    stage.setScene(scene);
+                    stage.show();
+
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        } else {
+            System.out.println("Não foi possível obter os dados do registro.");
+            return;
+        }
+    }
+    @FXML
+    public void eventJugador5(ActionEvent actionEvent) {
+        String nombreUsuarioActual = getUsuario_Actual();
+        if (nombreUsuarioActual == null) {
+            System.out.println("No es posible obtener el nombre del usuario actual.");
+            return;
+        }
+        nombreUsuarioActual = nombreUsuarioActual.trim();
+
+        String nombre = null;
+        String apellido = null;
+
+        String[] datos = cargarDatosRegistro(nombreUsuarioActual);
+        if (datos != null) {
+            nombre = datos[0];
+            apellido = datos[1];
+            Posiciones posicion = Posiciones.Delantero3_GrupoVerde;
+
+
+
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setTitle("Confirmar Acción");
+            alert.setHeaderText("¿SEGURO QUE QUIERES CONTINUAR?");
+            alert.setContentText("Accederás a la tabla calendário para eligir el día del partido.");
+
+            ButtonType result = alert.showAndWait().orElse(ButtonType.CANCEL);
+
+            if (result == ButtonType.OK) {
+                try {
+                    FXMLLoader loader = new FXMLLoader();
+                    loader.setLocation(getClass().getResource("/com/example/sisa/CalendarioFutbol2.fxml"));
+                    Parent root = loader.load();
+
+                    // Obtenha o controlador e defina o nome, sobrenome e posição
+                    CalendarioFutbol2 calendarioController = loader.getController();
                     calendarioController.setNombre(nombre);
                     calendarioController.setApellido(apellido);
                     calendarioController.setPosicion(posicion);
@@ -336,431 +334,7 @@ public class Futbol implements Initializable {
     }
     @FXML
     public void eventJugador6(ActionEvent actionEvent) {
-       String nombreUsuarioActual = getUsuario_Actual();
-        if (nombreUsuarioActual == null) {
-            System.out.println("No es posible obtener el nombre del usuario actual.");
-            return;
-        }
-        nombreUsuarioActual = nombreUsuarioActual.trim();
-
-        String nombre = null;
-        String apellido = null;
-
-        String[] datos = cargarDatosRegistro(nombreUsuarioActual);
-        if (datos != null) {
-            nombre = datos[0];
-            apellido = datos[1];
-            Posiciones posicion = Posiciones.Delantero2_GrupoVerde;
-
-
-
-            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-            alert.setTitle("Confirmar Acción");
-            alert.setHeaderText("¿SEGURO QUE QUIERES CONTINUAR?");
-            alert.setContentText("Accederás a la tabla calendário para eligir el día del partido.");
-
-            ButtonType result = alert.showAndWait().orElse(ButtonType.CANCEL);
-
-            if (result == ButtonType.OK) {
-                try {
-                    FXMLLoader loader = new FXMLLoader();
-                    loader.setLocation(getClass().getResource("/com/example/sisa/CalendarioFutbol1.fxml"));
-                    Parent root = loader.load();
-
-                    // Obtenha o controlador e defina o nome, sobrenome e posição
-                    CalendarioFutbol1 calendarioController = loader.getController();
-                    calendarioController.setNombre(nombre);
-                    calendarioController.setApellido(apellido);
-                    calendarioController.setPosicion(posicion);
-
-                    Scene scene = new Scene(root);
-                    Stage stage = new Stage();
-                    stage.setScene(scene);
-                    stage.show();
-
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-        } else {
-            System.out.println("Não foi possível obter os dados do registro.");
-            return;
-        }
-    }
-    @FXML
-    public void eventJugador7(ActionEvent actionEvent) {
-       String nombreUsuarioActual = getUsuario_Actual();
-        if (nombreUsuarioActual == null) {
-            System.out.println("No es posible obtener el nombre del usuario actual.");
-            return;
-        }
-        nombreUsuarioActual = nombreUsuarioActual.trim();
-
-        String nombre = null;
-        String apellido = null;
-
-        String[] datos = cargarDatosRegistro(nombreUsuarioActual);
-        if (datos != null) {
-            nombre = datos[0];
-            apellido = datos[1];
-            Posiciones posicion = Posiciones.Centrocambista4_GrupoVerde;
-
-
-
-            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-            alert.setTitle("Confirmar Acción");
-            alert.setHeaderText("¿SEGURO QUE QUIERES CONTINUAR?");
-            alert.setContentText("Accederás a la tabla calendário para eligir el día del partido.");
-
-            ButtonType result = alert.showAndWait().orElse(ButtonType.CANCEL);
-
-            if (result == ButtonType.OK) {
-                try {
-                    FXMLLoader loader = new FXMLLoader();
-                    loader.setLocation(getClass().getResource("/com/example/sisa/CalendarioFutbol1.fxml"));
-                    Parent root = loader.load();
-
-                    // Obtenha o controlador e defina o nome, sobrenome e posição
-                    CalendarioFutbol1 calendarioController = loader.getController();
-                    calendarioController.setNombre(nombre);
-                    calendarioController.setApellido(apellido);
-                    calendarioController.setPosicion(posicion);
-
-                    Scene scene = new Scene(root);
-                    Stage stage = new Stage();
-                    stage.setScene(scene);
-                    stage.show();
-
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-        } else {
-            System.out.println("Não foi possível obter os dados do registro.");
-            return;
-        }
-    }
-    @FXML
-    public void eventJugador8(ActionEvent actionEvent) {
-       String nombreUsuarioActual = getUsuario_Actual();
-        if (nombreUsuarioActual == null) {
-            System.out.println("No es posible obtener el nombre del usuario actual.");
-            return;
-        }
-        nombreUsuarioActual = nombreUsuarioActual.trim();
-
-        String nombre = null;
-        String apellido = null;
-
-        String[] datos = cargarDatosRegistro(nombreUsuarioActual);
-        if (datos != null) {
-            nombre = datos[0];
-            apellido = datos[1];
-            Posiciones posicion = Posiciones.Centrocambista1_GrupoAzul;
-
-
-
-            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-            alert.setTitle("Confirmar Acción");
-            alert.setHeaderText("¿SEGURO QUE QUIERES CONTINUAR?");
-            alert.setContentText("Accederás a la tabla calendário para eligir el día del partido.");
-
-            ButtonType result = alert.showAndWait().orElse(ButtonType.CANCEL);
-
-            if (result == ButtonType.OK) {
-                try {
-                    FXMLLoader loader = new FXMLLoader();
-                    loader.setLocation(getClass().getResource("/com/example/sisa/CalendarioFutbol1.fxml"));
-                    Parent root = loader.load();
-
-                    // Obtenha o controlador e defina o nome, sobrenome e posição
-                    CalendarioFutbol1 calendarioController = loader.getController();
-                    calendarioController.setNombre(nombre);
-                    calendarioController.setApellido(apellido);
-                    calendarioController.setPosicion(posicion);
-
-                    Scene scene = new Scene(root);
-                    Stage stage = new Stage();
-                    stage.setScene(scene);
-                    stage.show();
-
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-        } else {
-            System.out.println("Não foi possível obter os dados do registro.");
-            return;
-        }
-    }
-    @FXML
-    public void eventJugador9(ActionEvent actionEvent) {
-       String nombreUsuarioActual = getUsuario_Actual();
-        if (nombreUsuarioActual == null) {
-            System.out.println("No es posible obtener el nombre del usuario actual.");
-            return;
-        }
-        nombreUsuarioActual = nombreUsuarioActual.trim();
-
-        String nombre = null;
-        String apellido = null;
-
-        String[] datos = cargarDatosRegistro(nombreUsuarioActual);
-        if (datos != null) {
-            nombre = datos[0];
-            apellido = datos[1];
-            Posiciones posicion = Posiciones.Centrocambista2_GrupoAzul;
-
-
-
-            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-            alert.setTitle("Confirmar Acción");
-            alert.setHeaderText("¿SEGURO QUE QUIERES CONTINUAR?");
-            alert.setContentText("Accederás a la tabla calendário para eligir el día del partido.");
-
-            ButtonType result = alert.showAndWait().orElse(ButtonType.CANCEL);
-
-            if (result == ButtonType.OK) {
-                try {
-                    FXMLLoader loader = new FXMLLoader();
-                    loader.setLocation(getClass().getResource("/com/example/sisa/CalendarioFutbol1.fxml"));
-                    Parent root = loader.load();
-
-                    // Obtenha o controlador e defina o nome, sobrenome e posição
-                    CalendarioFutbol1 calendarioController = loader.getController();
-                    calendarioController.setNombre(nombre);
-                    calendarioController.setApellido(apellido);
-                    calendarioController.setPosicion(posicion);
-
-                    Scene scene = new Scene(root);
-                    Stage stage = new Stage();
-                    stage.setScene(scene);
-                    stage.show();
-
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-        } else {
-            System.out.println("Não foi possível obter os dados do registro.");
-            return;
-        }
-    }
-    @FXML
-    public void eventJugador10(ActionEvent actionEvent) {
-       String nombreUsuarioActual = getUsuario_Actual();
-        if (nombreUsuarioActual == null) {
-            System.out.println("No es posible obtener el nombre del usuario actual.");
-            return;
-        }
-        nombreUsuarioActual = nombreUsuarioActual.trim();
-
-        String nombre = null;
-        String apellido = null;
-
-        String[] datos = cargarDatosRegistro(nombreUsuarioActual);
-        if (datos != null) {
-            nombre = datos[0];
-            apellido = datos[1];
-            Posiciones posicion = Posiciones.Centrocambista3_GrupoAzul;
-
-
-
-            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-            alert.setTitle("Confirmar Acción");
-            alert.setHeaderText("¿SEGURO QUE QUIERES CONTINUAR?");
-            alert.setContentText("Accederás a la tabla calendário para eligir el día del partido.");
-
-            ButtonType result = alert.showAndWait().orElse(ButtonType.CANCEL);
-
-            if (result == ButtonType.OK) {
-                try {
-                    FXMLLoader loader = new FXMLLoader();
-                    loader.setLocation(getClass().getResource("/com/example/sisa/CalendarioFutbol1.fxml"));
-                    Parent root = loader.load();
-
-                    // Obtenha o controlador e defina o nome, sobrenome e posição
-                    CalendarioFutbol1 calendarioController = loader.getController();
-                    calendarioController.setNombre(nombre);
-                    calendarioController.setApellido(apellido);
-                    calendarioController.setPosicion(posicion);
-
-                    Scene scene = new Scene(root);
-                    Stage stage = new Stage();
-                    stage.setScene(scene);
-                    stage.show();
-
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-        } else {
-            System.out.println("Não foi possível obter os dados do registro.");
-            return;
-        }
-    }
-    @FXML
-    public void eventJugador11(ActionEvent actionEvent) {
-       String nombreUsuarioActual = getUsuario_Actual();
-        if (nombreUsuarioActual == null) {
-            System.out.println("No es posible obtener el nombre del usuario actual.");
-            return;
-        }
-        nombreUsuarioActual = nombreUsuarioActual.trim();
-
-        String nombre = null;
-        String apellido = null;
-
-        String[] datos = cargarDatosRegistro(nombreUsuarioActual);
-        if (datos != null) {
-            nombre = datos[0];
-            apellido = datos[1];
-            Posiciones posicion = Posiciones.Delantero1_GrupoAzul;
-
-
-
-            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-            alert.setTitle("Confirmar Acción");
-            alert.setHeaderText("¿SEGURO QUE QUIERES CONTINUAR?");
-            alert.setContentText("Accederás a la tabla calendário para eligir el día del partido.");
-
-            ButtonType result = alert.showAndWait().orElse(ButtonType.CANCEL);
-
-            if (result == ButtonType.OK) {
-                try {
-                    FXMLLoader loader = new FXMLLoader();
-                    loader.setLocation(getClass().getResource("/com/example/sisa/CalendarioFutbol1.fxml"));
-                    Parent root = loader.load();
-
-                    // Obtenha o controlador e defina o nome, sobrenome e posição
-                    CalendarioFutbol1 calendarioController = loader.getController();
-                    calendarioController.setNombre(nombre);
-                    calendarioController.setApellido(apellido);
-                    calendarioController.setPosicion(posicion);
-
-                    Scene scene = new Scene(root);
-                    Stage stage = new Stage();
-                    stage.setScene(scene);
-                    stage.show();
-
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-        } else {
-            System.out.println("Não foi possível obter os dados do registro.");
-            return;
-        }
-    }
-    @FXML
-    public void eventJugador12(ActionEvent actionEvent) {
-       String nombreUsuarioActual = getUsuario_Actual();
-        if (nombreUsuarioActual == null) {
-            System.out.println("No es posible obtener el nombre del usuario actual.");
-            return;
-        }
-        nombreUsuarioActual = nombreUsuarioActual.trim();
-
-        String nombre = null;
-        String apellido = null;
-
-        String[] datos = cargarDatosRegistro(nombreUsuarioActual);
-        if (datos != null) {
-            nombre = datos[0];
-            apellido = datos[1];
-            Posiciones posicion = Posiciones.Defensa1_GrupoAzul;
-
-
-
-            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-            alert.setTitle("Confirmar Acción");
-            alert.setHeaderText("¿SEGURO QUE QUIERES CONTINUAR?");
-            alert.setContentText("Accederás a la tabla calendário para eligir el día del partido.");
-
-            ButtonType result = alert.showAndWait().orElse(ButtonType.CANCEL);
-
-            if (result == ButtonType.OK) {
-                try {
-                    FXMLLoader loader = new FXMLLoader();
-                    loader.setLocation(getClass().getResource("/com/example/sisa/CalendarioFutbol1.fxml"));
-                    Parent root = loader.load();
-
-                    // Obtenha o controlador e defina o nome, sobrenome e posição
-                    CalendarioFutbol1 calendarioController = loader.getController();
-                    calendarioController.setNombre(nombre);
-                    calendarioController.setApellido(apellido);
-                    calendarioController.setPosicion(posicion);
-
-                    Scene scene = new Scene(root);
-                    Stage stage = new Stage();
-                    stage.setScene(scene);
-                    stage.show();
-
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-        } else {
-            System.out.println("Não foi possível obter os dados do registro.");
-            return;
-        }
-    }
-    @FXML
-    public void eventJugador13(ActionEvent actionEvent) {
-       String nombreUsuarioActual = getUsuario_Actual();
-        if (nombreUsuarioActual == null) {
-            System.out.println("No es posible obtener el nombre del usuario actual.");
-            return;
-        }
-        nombreUsuarioActual = nombreUsuarioActual.trim();
-
-        String nombre = null;
-        String apellido = null;
-
-        String[] datos = cargarDatosRegistro(nombreUsuarioActual);
-        if (datos != null) {
-            nombre = datos[0];
-            apellido = datos[1];
-            Posiciones posicion = Posiciones.Portero1_GrupoAzul;
-
-
-
-            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-            alert.setTitle("Confirmar Acción");
-            alert.setHeaderText("¿SEGURO QUE QUIERES CONTINUAR?");
-            alert.setContentText("Accederás a la tabla calendário para eligir el día del partido.");
-
-            ButtonType result = alert.showAndWait().orElse(ButtonType.CANCEL);
-
-            if (result == ButtonType.OK) {
-                try {
-                    FXMLLoader loader = new FXMLLoader();
-                    loader.setLocation(getClass().getResource("/com/example/sisa/CalendarioFutbol1.fxml"));
-                    Parent root = loader.load();
-
-                    // Obtenha o controlador e defina o nome, sobrenome e posição
-                    CalendarioFutbol1 calendarioController = loader.getController();
-                    calendarioController.setNombre(nombre);
-                    calendarioController.setApellido(apellido);
-                    calendarioController.setPosicion(posicion);
-
-                    Scene scene = new Scene(root);
-                    Stage stage = new Stage();
-                    stage.setScene(scene);
-                    stage.show();
-
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-        } else {
-            System.out.println("Não foi possível obter os dados do registro.");
-            return;
-        }
-    }
-    @FXML
-    public void eventJugador14(ActionEvent actionEvent) {
-       String nombreUsuarioActual = getUsuario_Actual();
+        String nombreUsuarioActual = getUsuario_Actual();
         if (nombreUsuarioActual == null) {
             System.out.println("No es posible obtener el nombre del usuario actual.");
             return;
@@ -788,11 +362,223 @@ public class Futbol implements Initializable {
             if (result == ButtonType.OK) {
                 try {
                     FXMLLoader loader = new FXMLLoader();
-                    loader.setLocation(getClass().getResource("/com/example/sisa/CalendarioFutbol1.fxml"));
+                    loader.setLocation(getClass().getResource("/com/example/sisa/CalendarioFutbol2.fxml"));
                     Parent root = loader.load();
 
                     // Obtenha o controlador e defina o nome, sobrenome e posição
-                    CalendarioFutbol1 calendarioController = loader.getController();
+                    CalendarioFutbol2 calendarioController = loader.getController();
+                    calendarioController.setNombre(nombre);
+                    calendarioController.setApellido(apellido);
+                    calendarioController.setPosicion(posicion);
+
+                    Scene scene = new Scene(root);
+                    Stage stage = new Stage();
+                    stage.setScene(scene);
+                    stage.show();
+
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        } else {
+            System.out.println("Não foi possível obter os dados do registro.");
+            return;
+        }
+    }
+    @FXML
+    public void eventJugador7(ActionEvent actionEvent) {
+        String nombreUsuarioActual = getUsuario_Actual();
+        if (nombreUsuarioActual == null) {
+            System.out.println("No es posible obtener el nombre del usuario actual.");
+            return;
+        }
+        nombreUsuarioActual = nombreUsuarioActual.trim();
+
+        String nombre = null;
+        String apellido = null;
+
+        String[] datos = cargarDatosRegistro(nombreUsuarioActual);
+        if (datos != null) {
+            nombre = datos[0];
+            apellido = datos[1];
+            Posiciones posicion = Posiciones.Defensa1_GrupoAzul;
+
+
+
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setTitle("Confirmar Acción");
+            alert.setHeaderText("¿SEGURO QUE QUIERES CONTINUAR?");
+            alert.setContentText("Accederás a la tabla calendário para eligir el día del partido.");
+
+            ButtonType result = alert.showAndWait().orElse(ButtonType.CANCEL);
+
+            if (result == ButtonType.OK) {
+                try {
+                    FXMLLoader loader = new FXMLLoader();
+                    loader.setLocation(getClass().getResource("/com/example/sisa/CalendarioFutbol2.fxml"));
+                    Parent root = loader.load();
+
+                    // Obtenha o controlador e defina o nome, sobrenome e posição
+                    CalendarioFutbol2 calendarioController = loader.getController();
+                    calendarioController.setNombre(nombre);
+                    calendarioController.setApellido(apellido);
+                    calendarioController.setPosicion(posicion);
+
+                    Scene scene = new Scene(root);
+                    Stage stage = new Stage();
+                    stage.setScene(scene);
+                    stage.show();
+
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        } else {
+            System.out.println("Não foi possível obter os dados do registro.");
+            return;
+        }
+    }
+    @FXML
+    public void eventJugador8(ActionEvent actionEvent) {
+        String nombreUsuarioActual = getUsuario_Actual();
+        if (nombreUsuarioActual == null) {
+            System.out.println("No es posible obtener el nombre del usuario actual.");
+            return;
+        }
+        nombreUsuarioActual = nombreUsuarioActual.trim();
+
+        String nombre = null;
+        String apellido = null;
+
+        String[] datos = cargarDatosRegistro(nombreUsuarioActual);
+        if (datos != null) {
+            nombre = datos[0];
+            apellido = datos[1];
+            Posiciones posicion = Posiciones.Centrocambista1_GrupoAzul;
+
+
+
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setTitle("Confirmar Acción");
+            alert.setHeaderText("¿SEGURO QUE QUIERES CONTINUAR?");
+            alert.setContentText("Accederás a la tabla calendário para eligir el día del partido.");
+
+            ButtonType result = alert.showAndWait().orElse(ButtonType.CANCEL);
+
+            if (result == ButtonType.OK) {
+                try {
+                    FXMLLoader loader = new FXMLLoader();
+                    loader.setLocation(getClass().getResource("/com/example/sisa/CalendarioFutbol2.fxml"));
+                    Parent root = loader.load();
+
+                    // Obtenha o controlador e defina o nome, sobrenome e posição
+                    CalendarioFutbol2 calendarioController = loader.getController();
+                    calendarioController.setNombre(nombre);
+                    calendarioController.setApellido(apellido);
+                    calendarioController.setPosicion(posicion);
+
+                    Scene scene = new Scene(root);
+                    Stage stage = new Stage();
+                    stage.setScene(scene);
+                    stage.show();
+
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        } else {
+            System.out.println("Não foi possível obter os dados do registro.");
+            return;
+        }
+    }
+    @FXML
+    public void eventJugador9(ActionEvent actionEvent) {
+        String nombreUsuarioActual = getUsuario_Actual();
+        if (nombreUsuarioActual == null) {
+            System.out.println("No es posible obtener el nombre del usuario actual.");
+            return;
+        }
+        nombreUsuarioActual = nombreUsuarioActual.trim();
+
+        String nombre = null;
+        String apellido = null;
+
+        String[] datos = cargarDatosRegistro(nombreUsuarioActual);
+        if (datos != null) {
+            nombre = datos[0];
+            apellido = datos[1];
+            Posiciones posicion = Posiciones.Delantero1_GrupoAzul;
+
+
+
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setTitle("Confirmar Acción");
+            alert.setHeaderText("¿SEGURO QUE QUIERES CONTINUAR?");
+            alert.setContentText("Accederás a la tabla calendário para eligir el día del partido.");
+
+            ButtonType result = alert.showAndWait().orElse(ButtonType.CANCEL);
+
+            if (result == ButtonType.OK) {
+                try {
+                    FXMLLoader loader = new FXMLLoader();
+                    loader.setLocation(getClass().getResource("/ccom/example/sisa/CalendarioFutbol2.fxml"));
+                    Parent root = loader.load();
+
+                    // Obtenha o controlador e defina o nome, sobrenome e posição
+                    CalendarioFutbol2 calendarioController = loader.getController();
+                    calendarioController.setNombre(nombre);
+                    calendarioController.setApellido(apellido);
+                    calendarioController.setPosicion(posicion);
+
+                    Scene scene = new Scene(root);
+                    Stage stage = new Stage();
+                    stage.setScene(scene);
+                    stage.show();
+
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        } else {
+            System.out.println("Não foi possível obter os dados do registro.");
+            return;
+        }
+    }
+    @FXML
+    public void eventJugador10(ActionEvent actionEvent) {
+        String nombreUsuarioActual = getUsuario_Actual();
+        if (nombreUsuarioActual == null) {
+            System.out.println("No es posible obtener el nombre del usuario actual.");
+            return;
+        }
+        nombreUsuarioActual = nombreUsuarioActual.trim();
+
+        String nombre = null;
+        String apellido = null;
+
+        String[] datos = cargarDatosRegistro(nombreUsuarioActual);
+        if (datos != null) {
+            nombre = datos[0];
+            apellido = datos[1];
+            Posiciones posicion = Posiciones.Portero1_GrupoAzul;
+
+
+
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setTitle("Confirmar Acción");
+            alert.setHeaderText("¿SEGURO QUE QUIERES CONTINUAR?");
+            alert.setContentText("Accederás a la tabla calendário para eligir el día del partido.");
+
+            ButtonType result = alert.showAndWait().orElse(ButtonType.CANCEL);
+
+            if (result == ButtonType.OK) {
+                try {
+                    FXMLLoader loader = new FXMLLoader();
+                    loader.setLocation(getClass().getResource("/com/example/sisa/CalendarioFutbol2.fxml"));
+                    Parent root = loader.load();
+
+                    // Obtenha o controlador e defina o nome, sobrenome e posição
+                    CalendarioFutbol2 calendarioController = loader.getController();
                     calendarioController.setNombre(nombre);
                     calendarioController.setApellido(apellido);
                     calendarioController.setPosicion(posicion);
@@ -831,7 +617,7 @@ public class Futbol implements Initializable {
     }
 
     public static void salvarJogadores() {
-        String rutaFichero = "src/main/java/com/example/sisa/Ficheros/Futbol1.txt";
+        String rutaFichero = "src/main/java/com/example/sisa/Ficheros/Futbol2.txt";
         try (FileWriter writer = new FileWriter(rutaFichero,true)) {
             for (Jugadores jugador : jugadores) {
                 writer.append(jugador.getNombre() + ";" + jugador.getApellido() + ";" + jugador.getPosiciones() + ";" + jugador.getFechaDisponible() + "\n");
@@ -841,9 +627,9 @@ public class Futbol implements Initializable {
         }
     }
 
-    public static void cargarJogadores(CalendarioFutbol1 calendario) {
+    public static void cargarJogadores(CalendarioFutbol2 calendario) {
         jugadores.clear();
-        String rutaFichero = "src/main/java/com/example/sisa/Ficheros/Futbol1.txt";
+        String rutaFichero = "src/main/java/com/example/sisa/Ficheros/Futbol2.txt";
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 
         try (Scanner lector = new Scanner(new File(rutaFichero))) {
