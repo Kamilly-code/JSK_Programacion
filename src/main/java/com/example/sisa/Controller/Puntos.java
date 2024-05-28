@@ -84,11 +84,9 @@ public class Puntos implements Initializable {
                         Object[] pepe = new Object[]{usuario, punto1, punto2, punto3, punto4};
 
                         // Si el usuario es el que estamos buscando, devolver los puntos
-                        if (contains(pepe, nombre)) {
+                        return pepe;
 
-                            return pepe;
 
-                        }
                     }
                 }
             } catch (FileNotFoundException e) {
@@ -100,20 +98,6 @@ public class Puntos implements Initializable {
         return null;
     }
 
-    /**
-     * Método para verificar si un nombre está en un array de objetos.
-     * @param array El array de objetos.
-     * @param nombre El nombre a buscar.
-     * @return true si el nombre está en el array, false en caso contrario.
-     */
-    public static boolean contains(Object[] array, String nombre) {
-        for (Object obj : array) {
-            if (obj instanceof String && ((String) obj).equals(nombre)) {
-                return true;
-            }
-        }
-        return false;
-    }
 
 
 }

@@ -25,7 +25,6 @@ import java.util.Scanner;
  * que la clase amigos nos agrega Usuarios a la lista de amigos que el usuario dese.
 
  */
-
 public class Amigos implements Initializable {
 
     @FXML
@@ -41,16 +40,7 @@ public class Amigos implements Initializable {
     private TableColumn<Usuario, String> columCorreo;
 
     @FXML
-    private Label labelBuscador;
-
-    @FXML
     private TextField textBuscador;
-
-    @FXML
-    private Button botonBuscar;
-
-
-
     /**
      * Método que se ejecuta al inicializar la clase.
      * Llama al método start con un nuevo Stage.
