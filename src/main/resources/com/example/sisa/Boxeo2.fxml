@@ -68,7 +68,7 @@
                                                         <Insets left="50.0" />
                                                     </HBox.margin>
                                                 </Button>
-                                                <Button layoutX="120.0" layoutY="20.0" minWidth="-Infinity" mnemonicParsing="false" prefHeight="35.0" prefWidth="100.0" styleClass="contenido_principal" stylesheets="@Estilos/estilo1.css" text="Incribise">
+                                                <Button layoutX="120.0" layoutY="20.0" minWidth="-Infinity" mnemonicParsing="false" onAction="#eventInscribirse" prefHeight="35.0" prefWidth="100.0" styleClass="contenido_principal" stylesheets="@Estilos/estilo1.css" text="Incribise">
                                                     <HBox.margin>
                                                         <Insets left="40.0" />
                                                     </HBox.margin>
@@ -102,7 +102,7 @@
                                                 <Image url="@Imagenes/Boxeo/pistaBOX.png" />
                                             </image>
                                         </ImageView>
-                                        <Button layoutX="321.0" layoutY="255.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="47.0" onAction="#eventJugador1" styleClass="boton-jugadores" stylesheets="@Estilos/estilo1.css">
+                                        <Button layoutX="321.0" layoutY="255.0" mnemonicParsing="false" onAction="#eventJugador1" prefHeight="37.0" prefWidth="47.0" styleClass="boton-jugadores" stylesheets="@Estilos/estilo1.css">
                                             <graphic>
                                                 <ImageView fitHeight="42.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
                                                     <image>
@@ -148,7 +148,7 @@
                                                 <Font size="17.0" />
                                             </font>
                                         </Label>
-                                        <Button layoutX="200.0" layoutY="255.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="47.0" onAction="#eventJugador2" styleClass="boton-jugadores" stylesheets="@Estilos/estilo1.css">
+                                        <Button layoutX="200.0" layoutY="255.0" mnemonicParsing="false" onAction="#eventJugador2" prefHeight="37.0" prefWidth="47.0" styleClass="boton-jugadores" stylesheets="@Estilos/estilo1.css">
                                             <graphic>
                                                 <ImageView fitHeight="42.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
                                                     <image>

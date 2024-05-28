@@ -43,24 +43,12 @@ public class Boxeo2 implements Initializable {
 
 
     @FXML
-    private void verMasBoxeo1(ActionEvent event) {
+    private void eventInscribirse(ActionEvent event){
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/sisa/Boxeo1.fxml"));
-            Parent baloncesto1 = loader.load();
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/sisa/Inscribirse2.fxml"));
+            Parent inscribirse = loader.load();
 
-            anchorPane.getChildren().setAll(baloncesto1);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    @FXML
-    private void verMasBoxeo2(ActionEvent event) {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/sisa/Boxeo2.fxml"));
-            Parent baloncesto2 = loader.load();
-
-            anchorPane.getChildren().setAll(baloncesto2);
+            anchorPane.getChildren().setAll(inscribirse);
         } catch (IOException e) {
             e.printStackTrace();
         }
