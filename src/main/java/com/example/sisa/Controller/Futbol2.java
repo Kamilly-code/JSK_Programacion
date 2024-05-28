@@ -83,7 +83,7 @@ public class Futbol2 implements Initializable {
         if (datos != null) {
             nombre = datos[0];
             apellido = datos[1];
-            Posiciones posicion = Posiciones.Luchador1;
+            Posiciones posicion = Posiciones.Delantero2_GrupoVerde;
 
 
 
