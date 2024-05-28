@@ -31,21 +31,10 @@ public class MenuLateral implements Initializable {
      * Controlador de registro para cargar los usuarios registrados.
      */
     @FXML
-    public Controller registroController;
+    public Controller registroController; // Controlador para el registro de usuarios
 
-
-    /**
-     * Componente de la interfaz de usuario para mostrar el nombre del usuario.
-     */
     @FXML
-    public TextFlow nombreUsuario;
-
-
-    /**
-     * Panel principal de la aplicación donde se cargarán las diferentes vistas.
-     */
-    private BorderPane mainBorderPane;
-
+    public TextFlow nombreUsuario;  // Componente de la interfaz para mostrar el nombre del usuario
 
     /**
      * Constructor de la clase MenuLateral.
@@ -55,99 +44,57 @@ public class MenuLateral implements Initializable {
         this.registroController = new Controller();
     }
 
+    private BorderPane mainBorderPane;  // Componente de la interfaz principal
 
     /**
-     * Establece el panel principal de la aplicación.
-     *
-     * @param mainBorderPane El panel principal.
+     * Establece el componente principal de la interfaz.
+     * @param mainBorderPane El componente principal de la interfaz.
      */
     public void setMainBorderPane(BorderPane mainBorderPane) {
         this.mainBorderPane = mainBorderPane;
     }
 
-
-    /**
-     * Maneja el evento del botón de inicio.
-     * Carga la vista principal en el panel central.
-     *
-     * @param event El evento de acción.
-     * @throws IOException Si ocurre un error al cargar el archivo FXML.
-     */
+    // Métodos para manejar los eventos de los botones de la barra lateral del menú
+    // Cada método carga una pantalla diferente en el componente principal de la interfaz
     @FXML
     private void botonInicio(ActionEvent event) throws IOException {
         System.out.println("Inicio");
         Parent root = FXMLLoader.load(getClass().getResource("/com/example/sisa/Principal.fxml"));
         mainBorderPane.setCenter(root);
+
     }
 
-
-    /**
-     * Maneja el evento del botón de deportes.
-     * Carga la vista de deportes en el panel central.
-     *
-     * @param event El evento de acción.
-     * @throws IOException Si ocurre un error al cargar el archivo FXML.
-     */
     @FXML
     private void botonDeportes(ActionEvent event) throws IOException {
         System.out.println("Deportes");
         Parent root = FXMLLoader.load(getClass().getResource("/com/example/sisa/Deportes.fxml"));
         mainBorderPane.setCenter(root);
+
+
     }
-
-
-    /**
-     * Maneja el evento del botón de puntos.
-     * Carga la vista de puntos en el panel central.
-     *
-     * @param event El evento de acción.
-     * @throws IOException Si ocurre un error al cargar el archivo FXML.
-     */
     @FXML
     private void botonPuntos(ActionEvent event) throws IOException {
         System.out.println("Puntos");
         Parent root = FXMLLoader.load(getClass().getResource("/com/example/sisa/Puntos.fxml"));
         mainBorderPane.setCenter(root);
     }
-
-
-    /**
-     * Maneja el evento del botón de amigos.
-     * Carga la vista de amigos en el panel central.
-     *
-     * @param event El evento de acción.
-     * @throws IOException Si ocurre un error al cargar el archivo FXML.
-     */
     @FXML
     private void botonAmigos(ActionEvent event) throws IOException {
         System.out.println("Amigos");
         Parent root = FXMLLoader.load(getClass().getResource("/com/example/sisa/Amigos.fxml"));
         mainBorderPane.setCenter(root);
+
     }
-
-
-    /**
-     * Maneja el evento del botón de salir.
-     * Termina la aplicación.
-     *
-     * @param event El evento de acción.
-     */
     @FXML
-    private void botonSalir(ActionEvent event) {
+    private void botonSalir(ActionEvent event){
         System.out.println("Salir");
         System.exit(0);
+
     }
-
-
-
     /**
-     * Inicializa el controlador después de cargar el archivo FXML.
-     *
-     * @param url La ubicación utilizada para resolver rutas relativas del objeto raíz o null si la ubicación no es conocida.
-     * @param resourceBundle Los recursos utilizados para localizar el objeto raíz o null si el objeto raíz no fue localizado.
+     * Método que se ejecuta al inicializar la clase.
+     * Carga la lista de usuarios y muestra el nombre del usuario actual en la interfaz.
      */
-
-
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         ArrayList<Usuario> usuarios = registroController.carregarUsuariosDoRegistro();
@@ -157,21 +104,22 @@ public class MenuLateral implements Initializable {
             return;
         }
         nomeUsuarioAtual = nomeUsuarioAtual.trim();
-        Usuario usuario = null;
+       Usuario usuario = null;
+
 
         Text text1 = new Text(nomeUsuarioAtual);
         nombreUsuario.getChildren().clear();
         nombreUsuario.getChildren().add(text1);
+
     }
 
-
     /**
-     * Obtiene el nombre del usuario actual desde un archivo de texto.
-     *
-     * @return El nombre del usuario actual, o null si no se pudo obtener.
+     * Método para obtener el nombre del usuario actual.
+     * Lee el nombre del usuario actual de un fichero.
+     * @return El nombre del usuario actual, o null si ocurre un error.
      */
 
-    public static String colocar_el_usuario_Actual() {
+    public static String colocar_el_usuario_Actual (){
         try {
             String rutaFichero = "src/main/java/com/example/sisa/Ficheros/Usuario_Actual.txt";
             File myFile = new File(rutaFichero);
