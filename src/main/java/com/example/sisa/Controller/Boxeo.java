@@ -98,7 +98,7 @@ public class Boxeo implements Initializable {
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
             alert.setTitle("Confirmar Acción");
             alert.setHeaderText("¿SEGURO QUE QUIERES CONTINUAR?");
-            alert.setContentText("Accederás a la tabla calendário para eligir el día del partido.");
+            alert.setContentText("Accederás a la tabla de calendario para elegir el día del partido.");
 
             ButtonType result = alert.showAndWait().orElse(ButtonType.CANCEL);
 
@@ -108,7 +108,7 @@ public class Boxeo implements Initializable {
                     loader.setLocation(getClass().getResource("/com/example/sisa/Calendario.fxml"));
                     Parent root = loader.load();
 
-                    // Obtenha o controlador e defina o nome, sobrenome e posição
+                    // Obtenga el controlador y defina el nombre, apellido y posición
                     Calendario calendarioController = loader.getController();
                     calendarioController.setNombre(nombre);
                     calendarioController.setApellido(apellido);
@@ -124,7 +124,7 @@ public class Boxeo implements Initializable {
                 }
             }
         } else {
-            System.out.println("Não foi possível obter os dados do registro.");
+            System.out.println("No se pueden obtener los datos del registro.");
             return;
         }
     }
@@ -154,7 +154,7 @@ public class Boxeo implements Initializable {
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
             alert.setTitle("Confirmar Acción");
             alert.setHeaderText("¿SEGURO QUE QUIERES CONTINUAR?");
-            alert.setContentText("Accederás a la tabla calendário para eligir el día del partido.");
+            alert.setContentText("Accederás a la tabla de calendario para elegir el día del partido.");
 
             ButtonType result = alert.showAndWait().orElse(ButtonType.CANCEL);
 
@@ -164,7 +164,7 @@ public class Boxeo implements Initializable {
                     loader.setLocation(getClass().getResource("/com/example/sisa/Calendario.fxml"));
                     Parent root = loader.load();
 
-                    // Obtenha o controlador e defina o nome, sobrenome e posição
+                    // Obtenga el controlador y defina el nombre, apellido y posición
                     Calendario calendarioController = loader.getController();
                     calendarioController.setNombre(nombre);
                     calendarioController.setApellido(apellido);
@@ -180,7 +180,7 @@ public class Boxeo implements Initializable {
                 }
             }
         } else {
-            System.out.println("Não foi possível obter os dados do registro.");
+            System.out.println("No se pueden obtener los datos del registro.");
             return;
         }
 
@@ -237,13 +237,13 @@ public class Boxeo implements Initializable {
                 }
             }
 
-            // Depois de carregar todos os jogadores, você pode chamar o método handleDateSelection
-            calendario.handleDateSelection(null); // Passe null se não tiver um ActionEvent
+            // Después de cargar a todos los jugadores, llamamos al método handleDateSelection
+            calendario.handleDateSelection(null); // Pase null si no tiene ActionEvent
 
         } catch (FileNotFoundException e) {
-            throw new RuntimeException("Arquivo não encontrado: " + rutaFichero, e);
+            throw new RuntimeException("Archivo no encontrado:" + rutaFichero, e);
         } catch (Exception e) {
-            throw new RuntimeException("Erro ao carregar jogadores", e);
+            throw new RuntimeException("Error al cargar jugadores", e);
         }
     }
 
@@ -253,7 +253,7 @@ public class Boxeo implements Initializable {
         if (fechaDisponible != null) {
             return fechaDisponible.getValue();
         } else {
-            System.out.println("DatePicker não foi inicializado corretamente.");
+            System.out.println("Datepicker no se ha inicializado correctamente.");
             return null;
         }
     }

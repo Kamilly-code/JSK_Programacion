@@ -36,14 +36,14 @@ public class TablaJugadores implements Initializable {
 
     public void setCalendarioController(Calendario calendarioController) {
         this.calendarioController = calendarioController;
-        // Call start() here instead
+
         start(new Stage());
     }
 
     private void start(Stage stage) {
        //ObservableList<Jugadores> listaJugadores = calendarioController.getJugadores();
 
-        // Limpe a tabela antes de adicionar os jogadores
+        // Limpia la tabla antes de añadir a los jugadores.
         tablaJugadores1.getItems().clear();
 
         try (Scanner scanner = new Scanner(new File("src/main/java/com/example/sisa/Ficheros/Jugadores.txt"))) {
@@ -58,11 +58,11 @@ public class TablaJugadores implements Initializable {
 
                     Jugadores jugador = new Jugadores(nombre, apellido, posiciones, fechaDisponible);
 
-                    // Verifique se a tabela já contém um jogador com o mesmo nome e a mesma data
+                    // Comprobar si la tabla ya contiene un jugador con el mismo nombre y la misma fecha
                     boolean isDuplicate = tablaJugadores1.getItems().stream()
                             .anyMatch(j -> j.getNombreCompleto().equals(jugador.getNombreCompleto()) && j.getFechaDisponible().equals(jugador.getFechaDisponible()));
 
-                    // Se não for uma duplicata, adicione à tabela
+                    // Si no es un duplicado, se añade a la tabla
                     if (!isDuplicate) {
                         tablaJugadores1.getItems().add(jugador);
                     }

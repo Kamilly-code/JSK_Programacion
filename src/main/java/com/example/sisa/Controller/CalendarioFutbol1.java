@@ -69,7 +69,7 @@ public class CalendarioFutbol1 implements Initializable {
         if (fechaDisponible != null) {
             return fechaDisponible.getValue();
         } else {
-            System.out.println("DatePicker não foi inicializado corretamente.");
+            System.out.println("Datepicker no se ha inicializado correctamente.");
             return LocalDate.of(2024, 05, 29);
         }
     }
@@ -103,15 +103,15 @@ public class CalendarioFutbol1 implements Initializable {
                 }
             });
 
-            // Defina uma data selecionada por padrão
+            // Establece una fecha seleccionada por defecto
             fechaDisponible.setValue(LocalDate.of(2024, 5, 28));
 
             fechaDisponible.setOnAction(this::handleDateSelection);
         } else {
-            System.out.println("DatePicker não foi inicializado corretamente.");
+            System.out.println("Datepicker no se ha inicializado correctamente.");
         }
 
-        // Chame o método loadSecondTabContent
+        // llama el método loadSecondTabContent
         loadSecondTabContent();
 
         if (futbol1 != null) {
@@ -121,13 +121,13 @@ public class CalendarioFutbol1 implements Initializable {
 
     public void handleDateSelection(ActionEvent actionEvent) {
         if (!areFXMLComponentsInitialized()) {
-            System.out.println("Um ou mais campos FXML não foram inicializados corretamente.");
+            System.out.println("Uno o más campos FXML no se han inicializado correctamente.");
             return;
         }
 
         LocalDate selectedDate = fechaDisponible.getValue();
         if (selectedDate == null) {
-            System.out.println("Nenhuma data foi selecionada.");
+            System.out.println("No se ha seleccionado ninguna fecha.");
             return;
         }
 
@@ -140,8 +140,8 @@ public class CalendarioFutbol1 implements Initializable {
                     })
                     .count();
 
-            if (count >= 2) {
-                System.out.println("Já existem 2 jogadores para a data selecionada.");
+            if (count >= 14) {
+                System.out.println("Ya hay 14 jugadores para la fecha seleccionada.");
                 return;
             }
         } catch (IOException e) {
@@ -149,7 +149,7 @@ public class CalendarioFutbol1 implements Initializable {
         }
 
         updateDateInfo(selectedDate);
-        Boxeo.salvarJogadores();
+        Futbol.salvarJogadores();
 
     }
 
@@ -158,7 +158,8 @@ public class CalendarioFutbol1 implements Initializable {
     }
 
     private void updateDateInfo(LocalDate selectedDate) {
-        this.jugador = new Jugadores(nombre, apellido, posicion, selectedDate); // Use o construtor com argumentos
+        this.jugador = new Jugadores(nombre, apellido, posicion, selectedDate);
+
         String formattedDate = selectedDate.format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
         labelFecha.setText(selectedDate.toString());
         jugador.setFechaDisponible(selectedDate);
@@ -169,29 +170,28 @@ public class CalendarioFutbol1 implements Initializable {
                     .filter(line -> line.contains(formattedDate))
                     .count();
 
-            if (count >= 2) {
-                disponibilidad.setText("Indisponível");
-                disponibilidad.setDisable(true); // Desabilita o botão
+            if (count >= 14) {
+                disponibilidad.setText("Indisponible");
+                disponibilidad.setDisable(true); // Deshabilita el botón
             } else {
-                disponibilidad.setText("Disponível");
-                disponibilidad.setDisable(false); // Habilita o botão
+                disponibilidad.setText("Disponible");
+                disponibilidad.setDisable(false); // Activa el botón
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-        System.out.println("fechaDisponible: " + fechaDisponible.getValue());
     }
 
     public void loadSecondTabContent() {
-        System.out.println("loadSecondTabContent está sendo chamado");
+        System.out.println("loadSecondTabContent está siendo llamado");
 
         try {
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(getClass().getResource("/com/example/sisa/TablaJugadoresFutbol1.fxml"));
             Parent root = loader.load();
 
-            // Inicialize calendarioController
+            // Inicia calendarioController
             TablaJugadoresFutbol1 controller = loader.getController();
             controller.setCalendarioController(this);
 
@@ -204,10 +204,10 @@ public class CalendarioFutbol1 implements Initializable {
     public void eventFecha(ActionEvent actionEvent) {
         selectedDate = fechaDisponible.getValue();
         if (selectedDate != null) {
-            System.out.println("Data selecionada: " + selectedDate);
-            // Aqui você pode adicionar o código para fazer algo com a data selecionada
+            System.out.println("Fecha seleccionada: " + selectedDate);
+
         } else {
-            System.out.println("Nenhuma data foi selecionada.");
+            System.out.println("Ninguna fecha fue seleccionada.");
         }
 
     }
@@ -215,16 +215,16 @@ public class CalendarioFutbol1 implements Initializable {
     public void eventYesOrNot(ActionEvent actionEvent) {
         LocalDate selectedDate = fechaDisponible.getValue();
         if (selectedDate == null) {
-            System.out.println("Nenhuma data foi selecionada.");
+            System.out.println("Ninguna fecha fue seleccionada.");
             return;
         }
 
-        // Verifique se o botão está disponível
-        if (disponibilidad.getText().equals("Disponível")) {
-            // Crie um novo jogador com a data selecionada
+        // Comprueba la disponibilidad del botón.
+        if (disponibilidad.getText().equals("Disponible")) {
+            // Crea un nuevo jugador con la fecha seleccionada
             Jugadores newJugador = new Jugadores(nombre, apellido, posicion, selectedDate);
 
-            // Adicione o novo jogador à lista de jogadores
+            //Añade el nuevo jugador a lista
             jugadores.add(newJugador);
 
             int resultado = posicionOjugadorOcupados(nombre, posicion, selectedDate);
@@ -234,14 +234,13 @@ public class CalendarioFutbol1 implements Initializable {
                 return;
             }
 
-            // Salve o novo jogador no arquivo Jugadores.txt
+            // Guarda el nuevo jugador en el archivo Jugadores.txt
             try (FileWriter writer = new FileWriter("src/main/java/com/example/sisa/Ficheros/Futbol1.txt", true)) {
                 writer.append(newJugador.getNombre() + ";" + newJugador.getApellido() + ";" + newJugador.getPosiciones() + ";" + newJugador.getFechaDisponible() + "\n");
             } catch (IOException e) {
-                System.out.println("Ocorreu um erro ao escrever no arquivo: " + e.getMessage());
+                System.out.println("Error al escribir en el archivo: " + e.getMessage());
             }
 
-            // Atualize a informação da data
             updateDateInfo(selectedDate);
         }
     }
@@ -250,13 +249,13 @@ public class CalendarioFutbol1 implements Initializable {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         if (resultado == 1) {
             alert.setTitle("Error!");
-            alert.setHeaderText("Posición ya ocupada");
-            alert.setContentText("Esta posición ya está ocupada por otro jugador, favor elegir otra");
+            alert.setHeaderText("Posición ocupada");
+            alert.setContentText("Esta posición ya está ocupada por otro jugador, por favor elija otra.");
             return alert;
         } else if (resultado == 2) {
             alert.setTitle("Error!");
-            alert.setHeaderText("Jugador ya cadastrado");
-            alert.setContentText("Ya estás cadastrado en una partida de boxeo en esa fecha");
+            alert.setHeaderText("Jugador ya registrado.");
+            alert.setContentText("Ya estás registrado en un partido de fútbol en esa fecha.");
             return alert;
         }
         return alert;
