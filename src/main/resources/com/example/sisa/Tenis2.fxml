@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="630.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sisa.Controller.Tenis2">
+<AnchorPane fx:id="anchorPane" prefHeight="630.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sisa.Controller.Tenis2">
     <children>
         <ScrollPane prefHeight="630.0" prefWidth="1024.0">
             <content>
@@ -63,7 +63,7 @@
                                         </VBox>
                                         <HBox alignment="CENTER_LEFT" prefHeight="54.0" prefWidth="416.0">
                                             <children>
-                                                <Button layoutX="120.0" layoutY="20.0" minWidth="-Infinity" mnemonicParsing="false" prefHeight="35.0" prefWidth="230.0" styleClass="contenido_principal" stylesheets="@Estilos/estilo1.css" text="Incribise">
+                                                <Button layoutX="120.0" layoutY="20.0" minWidth="-Infinity" mnemonicParsing="false" onAction="#eventInscribirse" prefHeight="35.0" prefWidth="230.0" styleClass="contenido_principal" stylesheets="@Estilos/estilo1.css" text="Inscribise">
                                                     <HBox.margin>
                                                         <Insets left="150.0" />
                                                     </HBox.margin>

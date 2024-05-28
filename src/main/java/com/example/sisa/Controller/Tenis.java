@@ -55,6 +55,17 @@ public class Tenis implements Initializable {
         }
     }
     @FXML
+    private void eventInscribirte(ActionEvent event){
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/sisa/Inscribirse4.fxml"));
+            Parent inscribirse = loader.load();
+
+            anchorPane.getChildren().setAll(inscribirse);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    @FXML
     private void verMasTenis2(ActionEvent event){
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/sisa/Tenis2.fxml"));
@@ -65,6 +76,8 @@ public class Tenis implements Initializable {
             e.printStackTrace();
         }
     }
+
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 

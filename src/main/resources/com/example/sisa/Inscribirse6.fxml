@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="630.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sisa.Controller.Tenis2">
+    <children>
+        <ScrollPane prefHeight="1024.0" prefWidth="1024.0">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1050.0" prefWidth="1024.0">
+                    <children>
+                        <ImageView fitHeight="1088.0" fitWidth="1200.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@Imagenes/Tenis/TEN.jpg" />
+                            </image>
+                        </ImageView>
+                        <VBox prefHeight="1067.0" prefWidth="1024.0">
+                            <children>
+                                <AnchorPane prefHeight="767.0" prefWidth="1149.0">
+                                    <children>
+                                        <ImageView fitHeight="636.0" fitWidth="872.0" layoutX="64.0" layoutY="182.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="-35.12432861328125">
+                                            <image>
+                                                <Image url="@Imagenes/Tenis/pistatenis.png" />
+                                            </image>
+                                        </ImageView>
+                                        <Button layoutX="359.0" layoutY="575.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="47.0" styleClass="boton-jugadores" stylesheets="@Estilos/estilo1.css">
+                                            <graphic>
+                                                <ImageView fitHeight="42.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@Imagenes/Futbol/JUGADOR.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </graphic></Button>
+                                        <Button layoutX="388.0" layoutY="286.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="47.0" styleClass="boton-jugadores" stylesheets="@Estilos/estilo1.css">
+                                            <graphic>
+                                                <ImageView fitHeight="42.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@Imagenes/Futbol/JUGADOR.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                        </Button>
+                                        <Button layoutX="564.0" layoutY="286.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="47.0" styleClass="boton-jugadores" stylesheets="@Estilos/estilo1.css">
+                                            <graphic>
+                                                <ImageView fitHeight="42.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@Imagenes/Futbol/JUGADOR.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                        </Button>
+                                        <Button layoutX="622.0" layoutY="570.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="59.0" styleClass="boton-jugadores" stylesheets="@Estilos/estilo1.css">
+                                            <graphic>
+                                                <ImageView fitHeight="42.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@Imagenes/Futbol/JUGADOR.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                        </Button>
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane layoutX="10.0" layoutY="709.0" prefHeight="0.0" prefWidth="1047.0" />
+                            </children>
+                        </VBox>
+                    </children>
+                </AnchorPane>
+            </content>
+        </ScrollPane>
+    </children>
+</AnchorPane>
