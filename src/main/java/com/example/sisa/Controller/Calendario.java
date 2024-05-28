@@ -47,6 +47,8 @@ public class Calendario implements Initializable {
     private String apellido;
     private Posiciones posicion;
 
+
+
     public DatePicker getFechaDisponible() {
         return fechaDisponible;
     }
@@ -89,7 +91,9 @@ public class Calendario implements Initializable {
     public void setBoxeo(Boxeo boxeo) {
         this.boxeo = boxeo;
     }
-    //**********************************************************************************
+
+
+    //*****************************************************************************************
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -160,6 +164,7 @@ public class Calendario implements Initializable {
     private void updateDateInfo(LocalDate selectedDate) {
         this.jugador = new Jugadores(nombre, apellido, posicion, selectedDate);
 
+
         String formattedDate = selectedDate.format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
         labelFecha.setText(selectedDate.toString());
         jugador.setFechaDisponible(selectedDate);
@@ -205,7 +210,7 @@ public class Calendario implements Initializable {
         selectedDate = fechaDisponible.getValue();
         if (selectedDate != null) {
             System.out.println("Fecha seleccionada: " + selectedDate);
-            // Aqui você pode adicionar o código para fazer algo com a data selecionada
+
         } else {
             System.out.println("Ninguna fecha fue seleccionada.");
         }
@@ -220,7 +225,7 @@ public class Calendario implements Initializable {
         }
 
         // Comprueba la disponibilidad del botón.
-        if (disponibilidad.getText().equals("Disponíble")) {
+        if (disponibilidad.getText().equals("Disponible")) {
             // Crea un nuevo jugador con la fecha seleccionada
             Jugadores newJugador = new Jugadores(nombre, apellido, posicion, selectedDate);
 

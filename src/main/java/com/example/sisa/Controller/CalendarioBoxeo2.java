@@ -79,17 +79,17 @@ public class CalendarioBoxeo2 implements Initializable {
     private Jugadores jugador;
     //*****************************************************************************************
 
-    Boxeo boxeo;
+    Boxeo2 boxeo2;
 
     public CalendarioBoxeo2() {
     }
 
-    public CalendarioBoxeo2(Boxeo boxeo) {
-        this.boxeo = boxeo;
+    public CalendarioBoxeo2(Boxeo2 boxeo2) {
+        this.boxeo2 = boxeo2;
     }
 
-    public void setBoxeo(Boxeo boxeo) {
-        this.boxeo = boxeo;
+    public void setBoxeo(Boxeo2 boxeo2) {
+        this.boxeo2 = boxeo2;
     }
     //*****************************************************************************************
 
@@ -116,7 +116,7 @@ public class CalendarioBoxeo2 implements Initializable {
         // llama el método loadSecondTabContent
         loadSecondTabContent();
 
-        if (boxeo != null) {
+        if (boxeo2 != null) {
             Boxeo2.cargarJogadores(this);
         }
     }

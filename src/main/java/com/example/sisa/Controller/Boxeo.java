@@ -44,7 +44,6 @@ public class Boxeo implements Initializable {
         return jugadores;
     }
 
-
     @FXML
     private void verMasBoxeo1(ActionEvent event) {
         try {
@@ -56,29 +55,7 @@ public class Boxeo implements Initializable {
             e.printStackTrace();
         }
     }
-    @FXML
-    private void eventListaJugadores(ActionEvent event){
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/sisa/TablaJugadores.fxml"));
-            Parent lista = loader.load();
 
-            anchorPane.getChildren().setAll(lista);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    @FXML
-    private void eventInscribirse1(ActionEvent event){
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/sisa/Inscribirse1.fxml"));
-            Parent inscribirse = loader.load();
-
-            anchorPane.getChildren().setAll(inscribirse);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
     @FXML
     private void verMasBoxeo2(ActionEvent event) {
         try {
@@ -91,6 +68,29 @@ public class Boxeo implements Initializable {
         }
     }
 
+    @FXML
+    private void eventListaJugadores(ActionEvent event){
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/sisa/TablaJugadores.fxml"));
+            Parent inscribirse = loader.load();
+
+            anchorPane.getChildren().setAll(inscribirse);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    @FXML
+    private void eventInscribirse1(ActionEvent event){
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/sisa/Inscribirse1.fxml"));
+            Parent inscribirse = loader.load();
+
+            anchorPane.getChildren().setAll(inscribirse);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -98,7 +98,7 @@ public class Boxeo implements Initializable {
     }
 
     @FXML
-    private void eventJugador1(ActionEvent actionEvent) {
+    private void eventJugador2(ActionEvent actionEvent) {
         String nombreUsuarioActual = getUsuario_Actual();
         if (nombreUsuarioActual == null) {
             System.out.println("No es posible obtener el nombre del usuario actual.");
@@ -113,7 +113,7 @@ public class Boxeo implements Initializable {
         if (datos != null) {
             nombre = datos[0];
             apellido = datos[1];
-            Posiciones posicion = Posiciones.Luchador1;
+            Posiciones posicion = Posiciones.Luchador2;
 
 
 
@@ -154,7 +154,7 @@ public class Boxeo implements Initializable {
 
 
     @FXML
-    public void eventJugador2(ActionEvent actionEvent) {
+    public void eventJugador1(ActionEvent actionEvent) {
         String nombreUsuarioActual = getUsuario_Actual();
         if (nombreUsuarioActual == null) {
             System.out.println("No es posible obtener el nombre del usuario actual.");
@@ -169,7 +169,7 @@ public class Boxeo implements Initializable {
         if (datos != null) {
             nombre = datos[0];
             apellido = datos[1];
-            Posiciones posicion = Posiciones.Luchador2;
+            Posiciones posicion = Posiciones.Luchador1;
 
 
 
@@ -260,10 +260,10 @@ public class Boxeo implements Initializable {
             }
 
             // Después de cargar a todos los jugadores, llamamos al método handleDateSelection
-            calendario.handleDateSelection(null); // Pase null si no tiene ActionEvent
+            calendario.handleDateSelection(null); /// Pase null si no tiene ActionEvent
 
         } catch (FileNotFoundException e) {
-            throw new RuntimeException("Archivo no encontrado:" + rutaFichero, e);
+            throw new RuntimeException("Archivo no encontrado: " + rutaFichero, e);
         } catch (Exception e) {
             throw new RuntimeException("Error al cargar jugadores", e);
         }
