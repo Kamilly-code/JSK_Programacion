@@ -33,7 +33,7 @@ public class Tenis implements Initializable {
     @FXML
     private AnchorPane anchorPane;
     //Exteriores****************************************************************************************
-    private CalendarioFutbol2 calendarioController;
+    private CalendarioTenis1 calendarioController;
     @FXML
     private DatePicker fechaDisponible;
     private static ObservableList<Jugadores> jugadores = FXCollections.observableArrayList();
@@ -104,7 +104,7 @@ public class Tenis implements Initializable {
         if (datos != null) {
             nombre = datos[0];
             apellido = datos[1];
-            Posiciones posicion = Posiciones.Luchador1;
+            Posiciones posicion = Posiciones.Tenista1;
 
 
 
@@ -118,11 +118,11 @@ public class Tenis implements Initializable {
             if (result == ButtonType.OK) {
                 try {
                     FXMLLoader loader = new FXMLLoader();
-                    loader.setLocation(getClass().getResource("/com/example/sisa/CalendarioFutbol2.fxml"));
+                    loader.setLocation(getClass().getResource("/com/example/sisa/CalendarioTenis1.fxml"));
                     Parent root = loader.load();
 
                     // Obtenga el controlador y defina el nombre, apellido y posición
-                    CalendarioFutbol2 calendarioController = loader.getController();
+                    CalendarioTenis1 calendarioController = loader.getController();
                     calendarioController.setNombre(nombre);
                     calendarioController.setApellido(apellido);
                     calendarioController.setPosicion(posicion);
@@ -157,7 +157,7 @@ public class Tenis implements Initializable {
         if (datos != null) {
             nombre = datos[0];
             apellido = datos[1];
-            Posiciones posicion = Posiciones.Defensa3_GrupoVerde;
+            Posiciones posicion = Posiciones.Tenista2;
 
 
 
@@ -171,11 +171,11 @@ public class Tenis implements Initializable {
             if (result == ButtonType.OK) {
                 try {
                     FXMLLoader loader = new FXMLLoader();
-                    loader.setLocation(getClass().getResource("/com/example/sisa/CalendarioFutbol2.fxml"));
+                    loader.setLocation(getClass().getResource("/com/example/sisa/CalendarioTenis1.fxml"));
                     Parent root = loader.load();
 
                     // Obtenga el controlador y defina el nombre, apellido y posición
-                    CalendarioFutbol2 calendarioController = loader.getController();
+                    CalendarioTenis1 calendarioController = loader.getController();
                     calendarioController.setNombre(nombre);
                     calendarioController.setApellido(apellido);
                     calendarioController.setPosicion(posicion);
@@ -221,7 +221,7 @@ public class Tenis implements Initializable {
     }
 
     public static void salvarJogadores() {
-        String rutaFichero = "src/main/java/com/example/sisa/Ficheros/Futbol2.txt";
+        String rutaFichero = "src/main/java/com/example/sisa/Ficheros/Tenis1.txt";
         try (FileWriter writer = new FileWriter(rutaFichero,true)) {
             for (Jugadores jugador : jugadores) {
                 writer.append(jugador.getNombre() + ";" + jugador.getApellido() + ";" + jugador.getPosiciones() + ";" + jugador.getFechaDisponible() + "\n");
@@ -231,9 +231,9 @@ public class Tenis implements Initializable {
         }
     }
 
-    public static void cargarJogadores(CalendarioFutbol2 calendario) {
+    public static void cargarJogadores(CalendarioTenis1 calendario) {
         jugadores.clear();
-        String rutaFichero = "src/main/java/com/example/sisa/Ficheros/Futbol2.txt";
+        String rutaFichero = "src/main/java/com/example/sisa/Ficheros/Tenis1.txt";
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 
         try (Scanner lector = new Scanner(new File(rutaFichero))) {

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sisa.Controller.CalendarioTenis2">
+   <children>
+      <DatePicker fx:id="fechaDisponible" layoutY="1.0" onAction="#eventFecha" prefHeight="26.0" prefWidth="600.0" promptText="Haz clic aquí para obtener fechas disponibles" />
+      <HBox prefHeight="421.0" prefWidth="600.0">
+         <children>
+            <Label fx:id="labelFecha" alignment="CENTER" prefHeight="38.0" prefWidth="296.0" text="Label">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="disponibilidad" mnemonicParsing="false" onAction="#eventYesOrNot" prefHeight="44.0" prefWidth="304.0" text="Button" />
+         </children>
+      </HBox>
+      <AnchorPane fx:id="segundaVentana" prefHeight="706.0" prefWidth="600.0" />
+   </children>
+</VBox>
