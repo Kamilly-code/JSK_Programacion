@@ -61,16 +61,11 @@
                                           </HBox>
                                       </children>
                                   </VBox>
-                                  <HBox alignment="CENTER_LEFT" prefHeight="54.0" prefWidth="416.0">
+                                  <HBox alignment="CENTER_LEFT" prefHeight="54.0" prefWidth="400.0">
                                       <children>
-                                          <Button minWidth="-Infinity" mnemonicParsing="false" prefHeight="35.0" prefWidth="198.0" styleClass="contenido_principal" stylesheets="@Estilos/estilo1.css" text="Lista de Jugadores">
+                                          <Button layoutX="120.0" layoutY="20.0" minWidth="-Infinity" mnemonicParsing="false" onAction="#eventInscribirse" prefHeight="35.0" prefWidth="232.0" styleClass="contenido_principal" stylesheets="@Estilos/estilo1.css" text="Incribise">
                                               <HBox.margin>
-                                                  <Insets left="50.0" />
-                                              </HBox.margin>
-                                          </Button>
-                                          <Button layoutX="120.0" layoutY="20.0" minWidth="-Infinity" mnemonicParsing="false" onAction="#eventInscribirse" prefHeight="35.0" prefWidth="100.0" styleClass="contenido_principal" stylesheets="@Estilos/estilo1.css" text="Incribise">
-                                              <HBox.margin>
-                                                  <Insets left="40.0" />
+                                                  <Insets left="150.0" />
                                               </HBox.margin>
                                           </Button>
                                       </children>
