@@ -18,8 +18,12 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 import java.util.Scanner;
-
+/**
+ * Clase Inicio que implementa la interfaz Initializable.
+ * Esta clase se encarga de manejar la lógica de inicio de sesión y registro de usuarios.
+ */
 public class Inicio implements Initializable {
+    // Campos de texto para recoger la información del usuario
     public static Stage stage = null;
     private static ArrayList<Usuario> usuarios = new ArrayList<>();
     @FXML
@@ -39,8 +43,6 @@ public class Inicio implements Initializable {
 
     @FXML
     private  TextField textApellidos, textCorreo;
-
-
 
 
 
