@@ -40,10 +40,7 @@ public class Inicio implements Initializable {
     @FXML
     private  TextField textApellidos, textCorreo;
 
-    @FXML
-    private Button botonIniciar;
-    @FXML
-    private Button botonContinuar;
+
 
 
 
@@ -286,7 +283,7 @@ public class Inicio implements Initializable {
             throw new RuntimeException(e);
         }
         try (FileWriter puntos_subir = new FileWriter((rutaPuntos),true)){
-            puntos_subir.append(usuario.getUsuario() + ",0,0,0,5" + "\n");
+            puntos_subir.append(usuario.getUsuario() + ",5,0,0,5" + "\n");
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

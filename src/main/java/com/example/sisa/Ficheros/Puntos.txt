@@ -1,4 +1,5 @@
 
-johan,0,0,0,5
-ismael,0,0,0,5
-kami,0,0,0,5
+johan,5,0,0
+ismael,5,0,0
+kami,5,0,10
+j,5,0,0,
