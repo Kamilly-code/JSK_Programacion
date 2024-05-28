@@ -41,7 +41,17 @@ public class Boxeo2 implements Initializable {
         return jugadores;
     }
 
+    @FXML
+    private void eventListaJugadores(ActionEvent event){
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/sisa/TablaJugadores2.fxml"));
+            Parent inscribirse = loader.load();
 
+            anchorPane.getChildren().setAll(inscribirse);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
     @FXML
     private void eventInscribirse(ActionEvent event){
         try {
