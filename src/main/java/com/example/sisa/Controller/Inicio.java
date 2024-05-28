@@ -44,7 +44,12 @@ public class Inicio implements Initializable {
     @FXML
     private  TextField textApellidos, textCorreo;
 
-
+    /**
+     * Método que se ejecuta al hacer clic en el botón de inicio de sesión.
+     * Comprueba si el usuario existe y si la contraseña es correcta.
+     * Si el inicio de sesión es exitoso, carga la pantalla principal.
+     * Si el inicio de sesión falla, muestra un mensaje de error.
+     */
 
     @FXML
     private void eventInicar(ActionEvent event) throws IOException {
@@ -94,6 +99,11 @@ public class Inicio implements Initializable {
         }
     }
 
+    /**
+     * Método que se ejecuta al hacer clic en el enlace de registro.
+     * Carga la pantalla de registro.
+     */
+
     @FXML
     private void eventLink(ActionEvent event) throws IOException {
         Object s = event.getSource();
@@ -108,6 +118,11 @@ public class Inicio implements Initializable {
         stage.show();
     }
 
+    /**
+     * Método que se ejecuta al hacer clic en la flecha.
+     * Carga la pantalla de inicio.
+     */
+
     @FXML
     private void eventFlecha(ActionEvent event) throws IOException {
         Object f = event.getSource();
@@ -120,6 +135,13 @@ public class Inicio implements Initializable {
         Scene scene = new Scene(root);
         stage.setScene(scene);
     }
+
+    /**
+     * Método que se ejecuta al hacer clic en el botón de continuar en la pantalla de registro.
+     * Crea un nuevo usuario y lo añade a la lista de usuarios.
+     * Si el registro es exitoso, carga la pantalla de inicio.
+     * Si el registro falla, muestra un mensaje de error.
+     */
 
     @FXML
     private void eventContinuar(ActionEvent event) throws IOException {
@@ -172,12 +194,18 @@ public class Inicio implements Initializable {
             }
         }
     }
-
+    /**
+     * Método que se ejecuta al inicializar la clase.
+     */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
     }
-
+    /**
+     * Método para crear y comprobar la existencia de un fichero.
+     * @param rutaFichero La ruta del fichero.
+     * @return El fichero si existe y es válido, de lo contrario, null.
+     */
 
     public static File crearYComprobarFichero(String rutaFichero) {
         // Implementar la lógica para crear y comprobar el fichero
@@ -186,7 +214,12 @@ public class Inicio implements Initializable {
         fichero.exists();
         return fichero;
     }
-
+    /**
+     * Método para comprobar si un usuario existe y si la contraseña es correcta.
+     * @param nombre El nombre del usuario.
+     * @param contraseña La contraseña del usuario.
+     * @return 2 si el usuario existe y la contraseña es correcta, 1 si la contraseña es incorrecta, 0 si el usuario no existe.
+     */
 
     public static int ComprobarUsuario (String nombre , String contraseña) {
         String rutaFichero = "src/main/java/com/example/sisa/Ficheros/Usuarios.txt";
@@ -222,6 +255,14 @@ public class Inicio implements Initializable {
         }
         return 0; // usuario no registrado
     }
+
+    /**
+     * Método para comprobar si un nombre de usuario y un correo electrónico ya existen.
+     * @param nombre El nombre del usuario.
+     * @param correo El correo electrónico del usuario.
+     * @return 1 si el nombre de usuario ya existe, 2 si el correo electrónico ya existe,
+     * 0 si ni el nombre de usuario ni el correo electrónico existen.
+     */
 
     public static int ComprobarUsuarioYGmail (String nombre, String correo) {
         String rutaFichero = "src/main/java/com/example/sisa/Ficheros/Usuarios.txt";
@@ -267,13 +308,21 @@ public class Inicio implements Initializable {
         return 0; // usuario no registrado
     }
 
+    /**
+     * Método para comprobar la existencia de un fichero.
+     * @param ruta La ruta del fichero.
+     * @return true si el fichero existe, false en caso contrario.
+     */
 
     public static boolean Crear_y_comprobar_fichero (String ruta){
         File fichero = new File(ruta);
         return fichero.exists();
     }
 
-
+    /**
+     * Método para guardar la información de un usuario recién creado.
+     * @param usuario El usuario recién creado.
+     */
     private void informacion_del_usuario_creado(Usuario usuario) {
         String rutaFichero = "src/main/java/com/example/sisa/Ficheros/Usuarios.txt";
         String rutaPuntos = "src/main/java/com/example/sisa/Ficheros/Puntos.txt";
@@ -309,6 +358,10 @@ public class Inicio implements Initializable {
 
     }
 
+    /**
+     * Método para guardar el nombre del usuario actual.
+     * @param nombre El nombre del usuario actual.
+     */
     public static void octener_el_usuario_actual (String nombre){
         String usuario_txt = "src/main/java/com/example/sisa/Ficheros/Usuario_Actual.txt";
         String contenido = nombre;

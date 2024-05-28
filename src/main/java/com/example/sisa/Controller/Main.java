@@ -15,15 +15,42 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class Main implements Initializable {
+
+
+    /**
+     * El panel principal que contiene otras vistas en la interfaz.
+     */
     @FXML
     private BorderPane borderPanel;
+
+
+    /**
+     * El botón para desplegar el menú lateral.
+     */
     @FXML
     private Button botonMenu;
+
+
+    /**
+     * El botón para desplegar el menú de configuración.
+     */
     @FXML
     private Button botonConfig;
 
 
+    /**
+     * Estado de visibilidad del menú lateral.
+     */
     private boolean MenuVisible = true;
+
+
+    /**
+     * Inicializa el controlador. Este método se llama automáticamente después de cargar el archivo FXML.
+     *
+     * @param url La ubicación utilizada para resolver rutas relativas del objeto raíz o null si la ubicación no es conocida.
+     * @param resourceBundle Los recursos utilizados para localizar el objeto raíz o null si el objeto raíz no fue localizado.
+     */
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         try {
@@ -31,7 +58,6 @@ public class Main implements Initializable {
             Parent menu = menuLateral.load();
             MenuLateral menuLateralController = menuLateral.getController();
             menuLateralController.setMainBorderPane(borderPanel);
-
 
             Parent cabecera = FXMLLoader.load(getClass().getResource("/com/example/sisa/menuInferior.fxml"));
             Parent principal = FXMLLoader.load(getClass().getResource("/com/example/sisa/Principal.fxml"));
@@ -48,9 +74,16 @@ public class Main implements Initializable {
 
         } catch (IOException e) {
             throw new RuntimeException(e);
-
         }
     }
+
+
+    /**
+     * Despliega u oculta el menú lateral en el panel principal.
+     *
+     * @param menu El menú que se mostrará u ocultará.
+     */
+
 
     private void desplegarMenu(Parent menu) {
         if (MenuVisible) {

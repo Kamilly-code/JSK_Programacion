@@ -25,23 +25,37 @@ import java.util.Scanner;
 import static com.example.sisa.Aplicación.stage;
 
 public class MenuLateral implements Initializable {
+
+
+    /**
+     * Controlador de registro para cargar los usuarios registrados.
+     */
     @FXML
-    public Controller registroController;
+    public Controller registroController; // Controlador para el registro de usuarios
 
     @FXML
-    public TextFlow nombreUsuario;
+    public TextFlow nombreUsuario;  // Componente de la interfaz para mostrar el nombre del usuario
 
-
+    /**
+     * Constructor de la clase MenuLateral.
+     * Inicializa el controlador de registro.
+     */
     public MenuLateral() {
         this.registroController = new Controller();
     }
 
-    private BorderPane mainBorderPane;
+    private BorderPane mainBorderPane;  // Componente de la interfaz principal
 
-
+    /**
+     * Establece el componente principal de la interfaz.
+     * @param mainBorderPane El componente principal de la interfaz.
+     */
     public void setMainBorderPane(BorderPane mainBorderPane) {
         this.mainBorderPane = mainBorderPane;
     }
+
+    // Métodos para manejar los eventos de los botones de la barra lateral del menú
+    // Cada método carga una pantalla diferente en el componente principal de la interfaz
     @FXML
     private void botonInicio(ActionEvent event) throws IOException {
         System.out.println("Inicio");
@@ -77,7 +91,10 @@ public class MenuLateral implements Initializable {
         System.exit(0);
 
     }
-
+    /**
+     * Método que se ejecuta al inicializar la clase.
+     * Carga la lista de usuarios y muestra el nombre del usuario actual en la interfaz.
+     */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         ArrayList<Usuario> usuarios = registroController.carregarUsuariosDoRegistro();
@@ -95,6 +112,12 @@ public class MenuLateral implements Initializable {
         nombreUsuario.getChildren().add(text1);
 
     }
+
+    /**
+     * Método para obtener el nombre del usuario actual.
+     * Lee el nombre del usuario actual de un fichero.
+     * @return El nombre del usuario actual, o null si ocurre un error.
+     */
 
     public static String colocar_el_usuario_Actual (){
         try {

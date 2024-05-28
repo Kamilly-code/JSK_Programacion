@@ -13,8 +13,22 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class Deportes implements Initializable {
+
+    /**
+     * El panel principal donde se cargarán las diferentes vistas.
+     */
+
+
     @FXML
     private AnchorPane anchorPane;
+
+
+    /**
+     * Muestra la vista de Futbol en el panel principal cuando se dispara un evento de acción.
+     *
+     * @param event El evento de acción que se dispara al hacer clic en el botón correspondiente.
+     */
+
 
     @FXML
     private void imagenFutbol(ActionEvent event) {
@@ -27,8 +41,17 @@ public class Deportes implements Initializable {
             e.printStackTrace();
         }
     }
+
+
+    /**
+     * Muestra la vista de Baloncesto en el panel principal cuando se dispara un evento de acción.
+     *
+     * @param event El evento de acción que se dispara al hacer clic en el botón correspondiente.
+     */
+
+
     @FXML
-    private void imagenBasket(ActionEvent event){
+    private void imagenBasket(ActionEvent event) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/sisa/Baloncesto.fxml"));
             Parent baloncesto = loader.load();
@@ -38,8 +61,17 @@ public class Deportes implements Initializable {
             e.printStackTrace();
         }
     }
+
+
+    /**
+     * Muestra la vista de Tenis en el panel principal cuando se dispara un evento de acción.
+     *
+     * @param event El evento de acción que se dispara al hacer clic en el botón correspondiente.
+     */
+
+
     @FXML
-    private void imagenTenis(ActionEvent event){
+    private void imagenTenis(ActionEvent event) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/sisa/Tenis.fxml"));
             Parent tenis = loader.load();
@@ -49,8 +81,17 @@ public class Deportes implements Initializable {
             e.printStackTrace();
         }
     }
+
+
+    /**
+     * Muestra la vista de Voley en el panel principal cuando se dispara un evento de acción.
+     *
+     * @param event El evento de acción que se dispara al hacer clic en el botón correspondiente.
+     */
+
+
     @FXML
-    private void imagenVoley(ActionEvent event){
+    private void imagenVoley(ActionEvent event) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/sisa/Voley.fxml"));
             Parent voley = loader.load();
@@ -60,8 +101,17 @@ public class Deportes implements Initializable {
             e.printStackTrace();
         }
     }
+
+
+    /**
+     * Muestra la vista de Golf en el panel principal cuando se dispara un evento de acción.
+     *
+     * @param event El evento de acción que se dispara al hacer clic en el botón correspondiente.
+     */
+
+
     @FXML
-    private void imagenGolf(ActionEvent event){
+    private void imagenGolf(ActionEvent event) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/sisa/Golf.fxml"));
             Parent golf = loader.load();
@@ -71,41 +121,78 @@ public class Deportes implements Initializable {
             e.printStackTrace();
         }
     }
+
+
+    /**
+     * Muestra la vista de Badminton en el panel principal cuando se dispara un evento de acción.
+     *
+     * @param event El evento de acción que se dispara al hacer clic en el botón correspondiente.
+     */
+
+
     @FXML
-    private void imagenBadminton(ActionEvent event){
+    private void imagenBadminton(ActionEvent event) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/sisa/Badminton.fxml"));
-            Parent golf = loader.load();
+            Parent badminton = loader.load();
 
-            anchorPane.getChildren().setAll(golf);
+            anchorPane.getChildren().setAll(badminton);
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
+
+
+    /**
+     * Muestra la vista de Beisbol en el panel principal cuando se dispara un evento de acción.
+     *
+     * @param event El evento de acción que se dispara al hacer clic en el botón correspondiente.
+     */
+
+
     @FXML
-    private void imagenBeisbol(ActionEvent event){
+    private void imagenBeisbol(ActionEvent event) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/sisa/Beisbol.fxml"));
-            Parent golf = loader.load();
+            Parent beisbol = loader.load();
 
-            anchorPane.getChildren().setAll(golf);
+            anchorPane.getChildren().setAll(beisbol);
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
+
+
+    /**
+     * Muestra la vista de Boxeo en el panel principal cuando se dispara un evento de acción.
+     *
+     * @param event El evento de acción que se dispara al hacer clic en el botón correspondiente.
+     */
+
+
     @FXML
-    private void imagenBoxeo(ActionEvent event){
+    private void imagenBoxeo(ActionEvent event) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/sisa/Boxeo.fxml"));
-            Parent golf = loader.load();
+            Parent boxeo = loader.load();
 
-            anchorPane.getChildren().setAll(golf);
+            anchorPane.getChildren().setAll(boxeo);
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
+
+
+    /**
+     * Inicializa el controlador. Este método se llama automáticamente después de cargar el archivo FXML.
+     *
+     * @param url La ubicación utilizada para resolver rutas relativas del objeto raíz o null si la ubicación no es conocida.
+     * @param resourceBundle Los recursos utilizados para localizar el objeto raíz o null si el objeto raíz no fue localizado.
+     */
+
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
+        // Método de inicialización del controlador, se puede utilizar para configurar componentes adicionales si es necesario.
     }
 }
