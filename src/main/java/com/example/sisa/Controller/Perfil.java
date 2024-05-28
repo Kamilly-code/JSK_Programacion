@@ -1,6 +1,7 @@
 package com.example.sisa.Controller;
 
 import com.example.sisa.POO.Usuario;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -9,6 +10,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.text.TextFlow;
 import javafx.stage.Stage;
 import javafx.stage.Window;
@@ -52,7 +54,8 @@ public class Perfil {
         this.registroController = new Controller();
     }
 
-
+    @FXML
+    private BorderPane borderPane;
 
     public void eventEditarNombre(ActionEvent actionEvent) {
         String novoNome = nombreCambiar.getText().trim();
@@ -229,22 +232,46 @@ public class Perfil {
     }
 
     public void eventMiCuenta(ActionEvent actionEvent) throws IOException {
-        Object vuelta = actionEvent.getSource();
-        Node node = (Node) vuelta;
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/sisa/menu.fxml"));
+            Parent perfil = loader.load();
+
+            borderPane.getChildren().setAll(perfil);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void eventCerrarSesión(ActionEvent event) {
+        Object irPerfil = event.getSource();
+        Node node = (Node) irPerfil;
         Scene scene1 = node.getScene();
         Window window = scene1.getWindow();
         Stage stage = (Stage) window;
+        stage.close();
 
-        Parent root = FXMLLoader.load(getClass().getResource("/com/example/sisa/menu.fxml"));
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-    }
-
-    public void eventCerrarSesión(ActionEvent actionEvent) {
-
+        Platform.runLater(() -> {
+            try {
+                Parent root = FXMLLoader.load(getClass().getResource("/com/example/sisa/inicio.fxml"));
+                Scene scene = new Scene(root);
+                Stage newStage = new Stage();
+                newStage.setScene(scene);
+                newStage.setResizable(false);
+                newStage.show();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        });
     }
 
     public void eventPerfil(ActionEvent actionEvent) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/sisa/Perfil.fxml"));
+            Parent perfil = loader.load();
 
+            borderPane.getChildren().setAll(perfil);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

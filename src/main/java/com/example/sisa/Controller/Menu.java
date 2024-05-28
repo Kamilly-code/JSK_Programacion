@@ -86,15 +86,14 @@ public class Menu implements Initializable {
     }
 
     public void eventPerfil(ActionEvent event) throws IOException {
-        Object irPerfil = event.getSource();
-        Node node = (Node) irPerfil;
-        Scene scene1 = node.getScene();
-        Window window = scene1.getWindow();
-        Stage stage = (Stage) window;
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/sisa/Perfil.fxml"));
+            Parent perfil = loader.load();
 
-        Parent root = FXMLLoader.load(getClass().getResource("/com/example/sisa/Perfil.fxml"));
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
+            mainBorderPane.getChildren().setAll(perfil);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
      @Override
@@ -139,52 +138,47 @@ public class Menu implements Initializable {
     }
 
     public void eventEditarNombre(ActionEvent actionEvent) throws IOException {
-       //src/main/resources/com/example/sisa/Perfil.fxml
-        Object irPerfil = actionEvent.getSource();
-        Node node = (Node) irPerfil;
-        Scene scene1 = node.getScene();
-        Window window = scene1.getWindow();
-        Stage stage = (Stage) window;
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/sisa/Perfil.fxml"));
+            Parent perfil = loader.load();
 
-        Parent root = FXMLLoader.load(getClass().getResource("/com/example/sisa/Perfil.fxml"));
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
+            mainBorderPane.getChildren().setAll(perfil);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public void eventEditarUsuario(ActionEvent actionEvent) throws IOException {
-        Object irPerfil = actionEvent.getSource();
-        Node node = (Node) irPerfil;
-        Scene scene1 = node.getScene();
-        Window window = scene1.getWindow();
-        Stage stage = (Stage) window;
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/sisa/Perfil.fxml"));
+            Parent perfil = loader.load();
 
-        Parent root = FXMLLoader.load(getClass().getResource("/com/example/sisa/Perfil.fxml"));
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
+            mainBorderPane.getChildren().setAll(perfil);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public void eventEditarContraseña(ActionEvent actionEvent) throws IOException {
-        Object irPerfil = actionEvent.getSource();
-        Node node = (Node) irPerfil;
-        Scene scene1 = node.getScene();
-        Window window = scene1.getWindow();
-        Stage stage = (Stage) window;
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/sisa/Perfil.fxml"));
+            Parent perfil = loader.load();
 
-        Parent root = FXMLLoader.load(getClass().getResource("/com/example/sisa/Perfil.fxml"));
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
+            mainBorderPane.getChildren().setAll(perfil);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public void eventEditarCorreo(ActionEvent actionEvent) throws IOException {
-        Object irPerfil = actionEvent.getSource();
-        Node node = (Node) irPerfil;
-        Scene scene1 = node.getScene();
-        Window window = scene1.getWindow();
-        Stage stage = (Stage) window;
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/sisa/Perfil.fxml"));
+            Parent perfil = loader.load();
 
-        Parent root = FXMLLoader.load(getClass().getResource("/com/example/sisa/Perfil.fxml"));
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
+            mainBorderPane.getChildren().setAll(perfil);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 }
