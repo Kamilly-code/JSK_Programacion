@@ -4,141 +4,159 @@
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane fx:id="anchorPane" prefHeight="630.0" prefWidth="1024.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sisa.Controller.Futbol">
-   <children>
-      <VBox prefHeight="630.0" prefWidth="1024.0" style="-fx-background-color: green;">
-         <children>
-            <HBox prefHeight="315.0" prefWidth="1024.0" style="-fx-background-color: blue;">
-               <children>
-                  <Button mnemonicParsing="false" prefHeight="315.0" prefWidth="146.0" styleClass="boton-menu" stylesheets="@Estilos/estilo1.css">
-                     <graphic>
-                        <ImageView fitHeight="154.0" fitWidth="124.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@Imagenes/Iconos/portero.png" />
-                           </image>
+<AnchorPane fx:id="anchorPane" prefHeight="630.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sisa.Controller.Futbol">
+    <children>
+        <ScrollPane prefHeight="1024.0" prefWidth="1024.0">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1050.0" prefWidth="1024.0">
+                    <children>
+                        <ImageView fitHeight="1088.0" fitWidth="1200.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@Imagenes/Futbol/fondoFF.jpg" />
+                            </image>
                         </ImageView>
-                     </graphic>
-                  </Button>
-                  <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="315.0" prefWidth="146.0" styleClass="boton-menu" stylesheets="@Estilos/estilo1.css">
-                     <graphic>
-                        <ImageView fitHeight="150.0" fitWidth="127.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@Imagenes/Iconos/defensa.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
-                  <Button layoutX="156.0" layoutY="10.0" mnemonicParsing="false" prefHeight="315.0" prefWidth="146.0" styleClass="boton-menu" stylesheets="@Estilos/estilo1.css">
-                     <graphic>
-                        <ImageView fitHeight="150.0" fitWidth="133.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@Imagenes/Iconos/defensa.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
-                  <Button layoutX="302.0" layoutY="10.0" mnemonicParsing="false" prefHeight="315.0" prefWidth="146.0" styleClass="boton-menu" stylesheets="@Estilos/estilo1.css">
-                     <graphic>
-                        <ImageView fitHeight="150.0" fitWidth="124.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@Imagenes/Iconos/centrocampista.png" />
-                           </image>
-                        </ImageView>
-                     </graphic></Button>
-                  <Button layoutX="448.0" layoutY="10.0" mnemonicParsing="false" prefHeight="315.0" prefWidth="146.0" styleClass="boton-menu" stylesheets="@Estilos/estilo1.css">
-                     <graphic>
-                        <ImageView fitHeight="150.0" fitWidth="129.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@Imagenes/Iconos/centrocampista.png" />
-                           </image>
-                        </ImageView>
-                     </graphic></Button>
-                  <Button layoutX="594.0" layoutY="10.0" mnemonicParsing="false" prefHeight="315.0" prefWidth="146.0" styleClass="boton-menu" stylesheets="@Estilos/estilo1.css">
-                     <graphic>
-                        <ImageView fitHeight="171.0" fitWidth="129.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@Imagenes/Iconos/centrocampista.png" />
-                           </image>
-                        </ImageView>
-                     </graphic></Button>
-                  <Button layoutX="740.0" layoutY="10.0" mnemonicParsing="false" prefHeight="315.0" prefWidth="146.0" styleClass="boton-menu" stylesheets="@Estilos/estilo1.css">
-                     <graphic>
-                        <ImageView fitHeight="150.0" fitWidth="127.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@Imagenes/Iconos/delantero.png" />
-                           </image>
-                        </ImageView>
-                     </graphic></Button>
-               </children>
-            </HBox>
-            <HBox layoutX="10.0" layoutY="10.0" prefHeight="315.0" prefWidth="1024.0" style="-fx-background-color: green;">
-               <children>
-                  <Button mnemonicParsing="false" prefHeight="315.0" prefWidth="146.0" styleClass="boton-menu" stylesheets="@Estilos/estilo1.css">
-                     <graphic>
-                        <ImageView fitHeight="154.0" fitWidth="124.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@Imagenes/Iconos/portero.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
-                  <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="315.0" prefWidth="146.0" styleClass="boton-menu" stylesheets="@Estilos/estilo1.css">
-                     <graphic>
-                        <ImageView fitHeight="150.0" fitWidth="127.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@Imagenes/Iconos/defensa.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
-                  <Button layoutX="156.0" layoutY="10.0" mnemonicParsing="false" prefHeight="315.0" prefWidth="146.0" styleClass="boton-menu" stylesheets="@Estilos/estilo1.css">
-                     <graphic>
-                        <ImageView fitHeight="150.0" fitWidth="133.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@Imagenes/Iconos/defensa.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
-                  <Button layoutX="302.0" layoutY="10.0" mnemonicParsing="false" prefHeight="315.0" prefWidth="146.0" styleClass="boton-menu" stylesheets="@Estilos/estilo1.css">
-                     <graphic>
-                        <ImageView fitHeight="150.0" fitWidth="124.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@Imagenes/Iconos/defensa.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
-                  <Button layoutX="448.0" layoutY="10.0" mnemonicParsing="false" prefHeight="315.0" prefWidth="146.0" styleClass="boton-menu" stylesheets="@Estilos/estilo1.css">
-                     <graphic>
-                        <ImageView fitHeight="150.0" fitWidth="129.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@Imagenes/Iconos/centrocampista.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
-                  <Button layoutX="594.0" layoutY="10.0" mnemonicParsing="false" prefHeight="315.0" prefWidth="146.0" styleClass="boton-menu" stylesheets="@Estilos/estilo1.css">
-                     <graphic>
-                        <ImageView fitHeight="171.0" fitWidth="129.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@Imagenes/Iconos/delantero.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
-                  <Button layoutX="740.0" layoutY="10.0" mnemonicParsing="false" prefHeight="315.0" prefWidth="146.0" styleClass="boton-menu" stylesheets="@Estilos/estilo1.css">
-                     <graphic>
-                        <ImageView fitHeight="150.0" fitWidth="127.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@Imagenes/Iconos/delantero.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
-               </children>
-            </HBox>
-         </children>
-      </VBox>
-   </children>
+                        <VBox prefHeight="1067.0" prefWidth="1024.0">
+                            <children>
+                                <AnchorPane prefHeight="767.0" prefWidth="1149.0">
+                                    <children>
+                                        <ImageView fitHeight="867.0" fitWidth="583.0" layoutX="226.0" layoutY="91.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="-48.0">
+                                            <image>
+                                                <Image url="@Imagenes/Futbol/campo.jpg" />
+                                            </image>
+                                        </ImageView>
+                                        <Button layoutX="540.0" layoutY="565.0" mnemonicParsing="false" onAction="#eventJugador1" prefHeight="37.0" prefWidth="47.0" styleClass="boton-jugadores" stylesheets="@Estilos/estilo1.css">
+                                            <graphic>
+                                                <ImageView fitHeight="42.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@Imagenes/Futbol/JUGADOR.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </graphic></Button>
+                                        <Button layoutX="619.0" layoutY="762.0" mnemonicParsing="false" onAction="#eventJugador2" prefHeight="37.0" prefWidth="47.0" styleClass="boton-jugadores" stylesheets="@Estilos/estilo1.css">
+                                            <graphic>
+                                                <ImageView fitHeight="42.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@Imagenes/Futbol/JUGADOR.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                        </Button>
+                                        <Button layoutX="343.0" layoutY="762.0" mnemonicParsing="false" onAction="#eventJugador3" prefHeight="37.0" prefWidth="47.0" styleClass="boton-jugadores" stylesheets="@Estilos/estilo1.css">
+                                            <graphic>
+                                                <ImageView fitHeight="42.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@Imagenes/Futbol/JUGADOR.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                        </Button>
+                                        <Button layoutX="485.0" layoutY="762.0" mnemonicParsing="false" onAction="#eventJugador4" prefHeight="37.0" prefWidth="47.0" styleClass="boton-jugadores" stylesheets="@Estilos/estilo1.css">
+                                            <graphic>
+                                                <ImageView fitHeight="42.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@Imagenes/Futbol/JUGADOR.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                        </Button>
+                                        <Button layoutX="483.0" layoutY="860.0" mnemonicParsing="false" onAction="#eventJugador5" prefHeight="37.0" prefWidth="47.0" styleClass="boton-jugadores" stylesheets="@Estilos/estilo1.css">
+                                            <graphic>
+                                                <ImageView fitHeight="42.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@Imagenes/Futbol/JUGADOR.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                        </Button>
+                                        <Button layoutX="426.0" layoutY="564.0" mnemonicParsing="false" onAction="#eventJugador6" prefHeight="37.0" prefWidth="47.0" styleClass="boton-jugadores" stylesheets="@Estilos/estilo1.css">
+                                            <graphic>
+                                                <ImageView fitHeight="42.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@Imagenes/Futbol/JUGADOR.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                        </Button>
+                                        <Button layoutX="483.0" layoutY="645.0" mnemonicParsing="false" onAction="#eventJugador7" prefHeight="37.0" prefWidth="47.0" styleClass="boton-jugadores" stylesheets="@Estilos/estilo1.css">
+                                            <graphic>
+                                                <ImageView fitHeight="42.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@Imagenes/Futbol/JUGADOR.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                        </Button>
+                                        <Button layoutX="589.0" layoutY="313.0" mnemonicParsing="false" onAction="#eventJugador8" prefHeight="37.0" prefWidth="47.0" styleClass="boton-jugadores" stylesheets="@Estilos/estilo1.css">
+                                            <graphic>
+                                                <ImageView fitHeight="42.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@Imagenes/Futbol/JUGADOR.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                        </Button>
+                                        <Button layoutX="382.0" layoutY="313.0" mnemonicParsing="false" onAction="#eventJugador9" prefHeight="37.0" prefWidth="47.0" styleClass="boton-jugadores" stylesheets="@Estilos/estilo1.css">
+                                            <graphic>
+                                                <ImageView fitHeight="42.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@Imagenes/Futbol/JUGADOR.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                        </Button>
+                                        <Button layoutX="487.0" layoutY="313.0" mnemonicParsing="false" onAction="#eventJugador10" prefHeight="37.0" prefWidth="47.0" styleClass="boton-jugadores" stylesheets="@Estilos/estilo1.css">
+                                            <graphic>
+                                                <ImageView fitHeight="42.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@Imagenes/Futbol/JUGADOR.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                        </Button>
+                                        <Button layoutX="483.0" layoutY="418.0" mnemonicParsing="false" onAction="#eventJugador11" prefHeight="37.0" prefWidth="47.0" styleClass="boton-jugadores" stylesheets="@Estilos/estilo1.css">
+                                            <graphic>
+                                                <ImageView fitHeight="42.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@Imagenes/Futbol/JUGADOR.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                        </Button>
+                                        <Button layoutX="426.0" layoutY="219.0" mnemonicParsing="false" onAction="#eventJugador12" prefHeight="37.0" prefWidth="47.0" styleClass="boton-jugadores" stylesheets="@Estilos/estilo1.css">
+                                            <graphic>
+                                                <ImageView fitHeight="42.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@Imagenes/Futbol/JUGADOR.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                        </Button>
+                                        <Button layoutX="483.0" layoutY="127.0" mnemonicParsing="false" onAction="#eventJugador13" prefHeight="37.0" prefWidth="47.0" styleClass="boton-jugadores" stylesheets="@Estilos/estilo1.css">
+                                            <graphic>
+                                                <ImageView fitHeight="42.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@Imagenes/Futbol/JUGADOR.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                        </Button>
+                                        <Button layoutX="540.0" layoutY="219.0" mnemonicParsing="false" onAction="#eventJugador14" prefHeight="37.0" prefWidth="47.0" styleClass="boton-jugadores" stylesheets="@Estilos/estilo1.css">
+                                            <graphic>
+                                                <ImageView fitHeight="42.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@Imagenes/Futbol/JUGADOR.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                        </Button>
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane layoutX="10.0" layoutY="709.0" prefHeight="0.0" prefWidth="1047.0" />
+                            </children>
+                        </VBox>
+                    </children>
+                </AnchorPane>
+            </content>
+        </ScrollPane>
+    </children>
 </AnchorPane>
