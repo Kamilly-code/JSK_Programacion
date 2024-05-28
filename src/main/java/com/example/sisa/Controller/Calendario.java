@@ -47,7 +47,7 @@ public class Calendario implements Initializable {
     private String apellido;
     private Posiciones posicion;
 
-
+// PLay the game in the live
 
     public DatePicker getFechaDisponible() {
         return fechaDisponible;
