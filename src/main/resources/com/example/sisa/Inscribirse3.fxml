@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="anchorPane" prefHeight="630.0" prefWidth="1024.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sisa.Controller.Futbol">
+   <children>
+      <VBox prefHeight="630.0" prefWidth="1024.0" style="-fx-background-color: green;">
+         <children>
+            <HBox prefHeight="315.0" prefWidth="1024.0" style="-fx-background-color: blue;">
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="315.0" prefWidth="146.0" styleClass="boton-menu" stylesheets="@Estilos/estilo1.css">
+                     <graphic>
+                        <ImageView fitHeight="154.0" fitWidth="124.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Imagenes/Iconos/portero.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="315.0" prefWidth="146.0" styleClass="boton-menu" stylesheets="@Estilos/estilo1.css">
+                     <graphic>
+                        <ImageView fitHeight="150.0" fitWidth="127.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Imagenes/Iconos/defensa.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button layoutX="156.0" layoutY="10.0" mnemonicParsing="false" prefHeight="315.0" prefWidth="146.0" styleClass="boton-menu" stylesheets="@Estilos/estilo1.css">
+                     <graphic>
+                        <ImageView fitHeight="150.0" fitWidth="133.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Imagenes/Iconos/defensa.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button layoutX="302.0" layoutY="10.0" mnemonicParsing="false" prefHeight="315.0" prefWidth="146.0" styleClass="boton-menu" stylesheets="@Estilos/estilo1.css">
+                     <graphic>
+                        <ImageView fitHeight="150.0" fitWidth="124.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Imagenes/Iconos/centrocampista.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button layoutX="448.0" layoutY="10.0" mnemonicParsing="false" prefHeight="315.0" prefWidth="146.0" styleClass="boton-menu" stylesheets="@Estilos/estilo1.css">
+                     <graphic>
+                        <ImageView fitHeight="150.0" fitWidth="129.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Imagenes/Iconos/centrocampista.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button layoutX="594.0" layoutY="10.0" mnemonicParsing="false" prefHeight="315.0" prefWidth="146.0" styleClass="boton-menu" stylesheets="@Estilos/estilo1.css">
+                     <graphic>
+                        <ImageView fitHeight="171.0" fitWidth="129.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Imagenes/Iconos/centrocampista.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button layoutX="740.0" layoutY="10.0" mnemonicParsing="false" prefHeight="315.0" prefWidth="146.0" styleClass="boton-menu" stylesheets="@Estilos/estilo1.css">
+                     <graphic>
+                        <ImageView fitHeight="150.0" fitWidth="127.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Imagenes/Iconos/delantero.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="10.0" prefHeight="315.0" prefWidth="1024.0" style="-fx-background-color: green;">
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="315.0" prefWidth="146.0" styleClass="boton-menu" stylesheets="@Estilos/estilo1.css">
+                     <graphic>
+                        <ImageView fitHeight="154.0" fitWidth="124.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Imagenes/Iconos/portero.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="315.0" prefWidth="146.0" styleClass="boton-menu" stylesheets="@Estilos/estilo1.css">
+                     <graphic>
+                        <ImageView fitHeight="150.0" fitWidth="127.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Imagenes/Iconos/defensa.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button layoutX="156.0" layoutY="10.0" mnemonicParsing="false" prefHeight="315.0" prefWidth="146.0" styleClass="boton-menu" stylesheets="@Estilos/estilo1.css">
+                     <graphic>
+                        <ImageView fitHeight="150.0" fitWidth="133.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Imagenes/Iconos/defensa.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button layoutX="302.0" layoutY="10.0" mnemonicParsing="false" prefHeight="315.0" prefWidth="146.0" styleClass="boton-menu" stylesheets="@Estilos/estilo1.css">
+                     <graphic>
+                        <ImageView fitHeight="150.0" fitWidth="124.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Imagenes/Iconos/defensa.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button layoutX="448.0" layoutY="10.0" mnemonicParsing="false" prefHeight="315.0" prefWidth="146.0" styleClass="boton-menu" stylesheets="@Estilos/estilo1.css">
+                     <graphic>
+                        <ImageView fitHeight="150.0" fitWidth="129.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Imagenes/Iconos/centrocampista.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button layoutX="594.0" layoutY="10.0" mnemonicParsing="false" prefHeight="315.0" prefWidth="146.0" styleClass="boton-menu" stylesheets="@Estilos/estilo1.css">
+                     <graphic>
+                        <ImageView fitHeight="171.0" fitWidth="129.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Imagenes/Iconos/delantero.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button layoutX="740.0" layoutY="10.0" mnemonicParsing="false" prefHeight="315.0" prefWidth="146.0" styleClass="boton-menu" stylesheets="@Estilos/estilo1.css">
+                     <graphic>
+                        <ImageView fitHeight="150.0" fitWidth="127.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Imagenes/Iconos/delantero.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

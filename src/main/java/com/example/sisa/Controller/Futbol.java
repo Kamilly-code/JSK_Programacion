@@ -54,6 +54,18 @@ public class Futbol implements Initializable {
             e.printStackTrace();
         }
     }
+
+    @FXML
+    private void eventInscribirse(ActionEvent event){
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/sisa/Inscribirse3.fxml"));
+            Parent futbol1 = loader.load();
+
+            anchorPane.getChildren().setAll(futbol1);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
     @FXML
     private void verMasFutbol2(ActionEvent event){
         try {
