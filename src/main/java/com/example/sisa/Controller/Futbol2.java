@@ -63,6 +63,18 @@ public class Futbol2 implements Initializable {
             e.printStackTrace();
         }
     }
+
+    @FXML
+    private void eventInscribirse(ActionEvent event){
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/sisa/Inscribirse5.fxml"));
+            Parent inscribirse = loader.load();
+
+            anchorPane.getChildren().setAll(inscribirse);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
