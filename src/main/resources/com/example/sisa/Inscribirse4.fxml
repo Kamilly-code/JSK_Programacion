@@ -52,12 +52,12 @@
                                 <HBox prefHeight="337.0" prefWidth="1024.0" />
                                 <AnchorPane prefHeight="1161.0" prefWidth="1024.0">
                                     <children>
-                                        <ImageView fitHeight="746.0" fitWidth="951.0" layoutX="9.0" layoutY="108.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="250.0">
+                                        <ImageView fitHeight="667.0" fitWidth="933.0" layoutX="27.0" layoutY="108.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="260.0">
                                             <image>
                                                 <Image url="@Imagenes/Tenis/pistatenis.png" />
                                             </image>
                                         </ImageView>
-                                        <Button layoutX="241.0" layoutY="379.0" mnemonicParsing="false" onAction="#eventJugador2" prefHeight="37.0" prefWidth="47.0" styleClass="boton-jugadores" stylesheets="@Estilos/estilo1.css">
+                                        <Button layoutX="473.0" layoutY="538.0" mnemonicParsing="false" onAction="#eventJugador2" prefHeight="37.0" prefWidth="47.0" styleClass="boton-jugadores" stylesheets="@Estilos/estilo1.css">
                                             <graphic>
                                                 <ImageView fitHeight="42.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
                                                     <image>
@@ -65,7 +65,7 @@
                                                     </image>
                                                 </ImageView>
                                             </graphic></Button>
-                                        <Button layoutX="241.0" layoutY="158.0" mnemonicParsing="false" onAction="#eventJugador1" prefHeight="37.0" prefWidth="47.0" styleClass="boton-jugadores" stylesheets="@Estilos/estilo1.css">
+                                        <Button layoutX="473.0" layoutY="108.0" mnemonicParsing="false" onAction="#eventJugador1" prefHeight="37.0" prefWidth="47.0" styleClass="boton-jugadores" stylesheets="@Estilos/estilo1.css">
                                             <graphic>
                                                 <ImageView fitHeight="42.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
                                                     <image>
