@@ -73,6 +73,12 @@
 }
 
 
+.text-color {
+    -fx-fill: white;
+}
+#text-color {
+    -fx-fill: white;
+}
 /*=========================== FUTBOL ===========================*/
 
 .menu-boton{
