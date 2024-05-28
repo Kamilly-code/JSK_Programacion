@@ -56,7 +56,29 @@ public class Boxeo implements Initializable {
             e.printStackTrace();
         }
     }
+    @FXML
+    private void eventListaJugadores(ActionEvent event){
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/sisa/TablaJugadores.fxml"));
+            Parent lista = loader.load();
 
+            anchorPane.getChildren().setAll(lista);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    private void eventInscribirse1(ActionEvent event){
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/sisa/Inscribirse1.fxml"));
+            Parent inscribirse = loader.load();
+
+            anchorPane.getChildren().setAll(inscribirse);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
     @FXML
     private void verMasBoxeo2(ActionEvent event) {
         try {

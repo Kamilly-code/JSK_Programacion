@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="anchorPane" prefHeight="630.0" prefWidth="1024.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sisa.Controller.Boxeo">
+   <children>
+      <Button contentDisplay="CENTER" mnemonicParsing="false" onAction="#eventJugador1" prefHeight="498.0" prefWidth="438.0" stylesheets="@Estilos/estilo1.css" text="LUCHADOR 1" textAlignment="CENTER" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="551.0" fitWidth="407.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Imagenes/Boxeo/Boxeador1.jpg" />
+               </image>
+            </ImageView>
+         </graphic>
+         <styleClass>
+            <String fx:value="boton-menu" />
+            <String fx:value="boton-pelear" />
+         </styleClass>
+         <font>
+            <Font name="Serif Bold" size="44.0" />
+         </font>
+      </Button>
+      <Button contentDisplay="CENTER" layoutX="490.0" layoutY="-16.0" mnemonicParsing="false" onAction="#eventJugador2" prefHeight="498.0" prefWidth="438.0" stylesheets="@Estilos/estilo1.css" text="LUCHADOR 2" textAlignment="CENTER" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="614.0" fitWidth="407.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Imagenes/Boxeo/Boxeador2.jpg" />
+               </image>
+            </ImageView>
+         </graphic>
+         <styleClass>
+            <String fx:value="boton-menu" />
+            <String fx:value="boton-pelear" />
+         </styleClass>
+         <font>
+            <Font name="Serif Bold" size="44.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

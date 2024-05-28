@@ -7,6 +7,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import java.io.File;
@@ -28,6 +29,8 @@ public class TablaJugadores implements Initializable {
 
     private Calendario calendarioController;
 
+    @FXML
+    private AnchorPane tabla;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
